@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require plugins
+//= require owl.carousel.min
+//= require vendor/jquery.fancybox.pack
+//= require jquery.validate.min
+//= require jquery.validate.additional-methods.min
+//= require jquery.validate.messages_ru.min
+//= require jquery.inputmask
+//= require jquery.inputmask.phone.extensions
+//= require main
