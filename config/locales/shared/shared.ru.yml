@@ -1,0 +1,12 @@
+ru:
+  page_title: 'AFinance'
+
+  email: 'Email'
+  password: 'Пароль'
+  password_confirmation:  'Подтверждение пароля'
+  password_page: 'Cменить пароль'
+  message:       'Cooбщение'
+  remember_me:   'Запомнить меня'
+  sign_into:     'Войти'
+
+  sign_in:       'Войти'

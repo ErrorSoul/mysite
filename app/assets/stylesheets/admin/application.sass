@@ -1,0 +1,68 @@
+@import 'bootstrap-sprockets'
+@import 'bootstrap'
+
+
+body
+  padding-top: 70px
+
+.page-header
+  margin-top: 0px
+
+.table-striped
+  td
+    border-top: 0px !important
+
+.glyphicon
+  margin-right: 3px
+
+.actions
+  @extend .pull-right
+
+  .btn
+    margin-right: 5px
+
+.form-actions
+  .btn-block-left,
+  .btn-block-right
+    @extend .btn-block
+    margin-top: 5px
+    width: 49%
+
+  .btn-block-left
+    @extend .pull-left
+
+  .btn-block-right
+    @extend .pull-right
+
+.required:after
+  color: red
+  content: ' *'
+
+.comment-panel
+  margin-bottom: 30px
+
+#search_q
+  margin-right: 2px
+
+.fixed
+  position: fixed
+
+.ui-autocomplete
+  position: absolute
+  top: 0
+  left: 0
+  cursor: default
+
+form
+  div.scrollable
+    border: 1px solid #ccc
+    overflow: scroll
+    height: 200px
+    padding: 5px 0 10px 10px
+
+.input-group-addon.glyphicon
+  top: 0px
+
+.thumbnail.medium img
+  width: 114px
+  height: 114px

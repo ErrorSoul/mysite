@@ -1,0 +1,136 @@
+ru:
+  #
+  # Meta Fields
+  #
+  full_name: 'ФИО'
+  first_name: 'Имя'
+  last_name: 'Фамилия'
+  middle_name: 'Отчество'
+  no_middle_name: 'Отсутствие отчества'
+  helper_middle_name: 'Отметьте, если отчества нет'
+  sex: 'Пол'
+  birth_date: 'Дата рождения'
+  birth_place: 'Место рождения'
+  web_site: 'Сайт'
+  created_at: 'Дата создания'
+  contract_number: 'Договор'
+  sum: 'Сумма'
+  product: 'Продукт'
+
+  identification: 'Идентификация'
+  jur_name_full: 'Наименование'
+  jur_name_short: 'Наименование'
+
+  sex_w: 'Женский'
+  sex_m: 'Мужской'
+
+  #
+  # User fields
+  #
+  phone: 'Телефон'
+  role: 'Должность'
+
+  #
+  # Agent fields
+  #
+  company: 'Компания'
+  position: 'Должность'
+  _position: 'В должности'
+  commission: 'Вознаграждение'
+  state: 'Cтатус'
+
+  #
+  # Passport Fields
+  #
+  serie: 'Серия'
+  number: 'Номер'
+  issued: 'Кем выдан'
+  issue_date: 'Дата выдачи'
+  code: 'Код подразделения'
+
+  #
+  # ExternalValidation Fields
+  #
+  ok_terrorist: 'Террорист?'
+  ok_lost_passport: 'Утерянный?'
+  ok_inn: 'Корректный ИНН?'
+
+  #
+  # Address Fields
+  #
+  registration: 'Адрес регистрации'
+  residence: 'Адрес проживания'
+  juristic: 'Юридический адрес'
+  factual: 'Фактический адрес'
+  flag: 'Coвпадение'
+  match_juristic: 'Юридический адрес совпадает с фактическим'
+  match_physical: 'Адрес проживания совпадает с адресом регистрации'
+  postmail_flag: 'Для корреспонденции'
+  match_postmail: 'Использовать данный адрес для направления корреспонденции'
+  country: 'Страна'
+  region: 'Регион'
+  area: 'Район'
+  zone: 'Область'
+  city: 'Город'
+  abbr_city: 'г.'
+  zipcode: 'Индекс'
+  street: 'Улица'
+  abbr_street: 'ул.'
+  house: 'Дом'
+  abbr_house: 'д.'
+  housing: 'Корпус'
+  abbr_housing: 'корп.'
+  bldg: 'Cтроение'
+  abbr_bldg: 'стр.'
+  flat: 'Квартира'
+  abbr_flat: 'кв.'
+
+  #
+  # Banking Detail fields
+  #
+  ogrn: 'ОГРН'
+  inn: 'ИНН'
+  kpp: 'КПП'
+  rs: 'Р/с'
+  ks: 'К/с'
+  bik: 'БИК'
+  ogrnip: 'ОГРНИП'
+  oms: 'ОМС'
+  snils: 'СНИЛС'
+
+  #
+  # Scan Fields
+  #
+  decision: 'Протокол/Решение'
+  order: 'Приказ'
+  inn_kpp: 'ИНН/КПП'
+
+  #
+  # Client Fields
+  #
+  tax_resident: 'Являетесь ли Вы налоговым резидентом РФ?'
+  public_official: 'Являетесь ли Вы публичным должностным лицом?'
+  relative_official: 'Являетесь ли Вы супругом или родственником публичного должностного лица?'
+  represent: 'Сведения о наличии представителя?'
+  benefit: 'Будете ли Вы действовать к выгоде другого лица при проведении сделок и иных операций?'
+  benefit_owner: 'Сведения о наличии бенефициарного владельца?'
+
+  #
+  # Beneficiary Fields
+  #
+  reason_name: 'Документ'
+  reason_number: 'Номер договора'
+  reason_date: 'Дата договора'
+  individual_date: 'Дата регистрации'
+  individual_number: 'Номер'
+  individual_place: 'Место регистрации'
+  hint_individual_number: 'Государственный регистрационный номер'
+  hint_individual_place: 'Наименование регистрирующего органа и место регистрации'
+
+  #
+  # AgentProduct Fields
+  #
+  name: 'Название'
+  agent_product_objects: 'Объекты инвестирования'
+  agent_product_deal_types: 'Типы сделок'
+  reward: 'Вознаграждение'
