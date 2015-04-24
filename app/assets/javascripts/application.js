@@ -21,3 +21,4 @@
 //= require jquery.inputmask
 //= require jquery.inputmask.phone.extensions
 //= require main
+//= require bootstrap

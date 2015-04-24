@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     sessions:      'authentication/sessions'
   }
 
+  namespace :admin do
+    resource  :dashboard, only: :show
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

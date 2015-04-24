@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Admin.create!(
+  email: "afinance.dev+admin@gmail.com",
+  password: "Adminadmin1"
+  )
+
+%w(
+  nska
+  hotey
+  isu-capital
+  investment
+  strategic
+  isu-ai
+).each do |name|
+  Fund.create!(name: name, content: "")
+end
