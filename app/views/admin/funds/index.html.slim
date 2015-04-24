@@ -1,0 +1,33 @@
+.page-header
+  h3
+    = t :funds
+
+    /.actions
+      = btn_sm_to_create new_admin_fund_path
+
+
+
+table.table.table-striped
+  thead
+    tr
+      th = t :id
+      th = t :name
+      th
+
+  tbody
+    - if @funds.blank?
+      tr
+        td colspan='6' = t :not_found
+
+    - @funds.each do |fund|
+      tr
+        td = fund.id
+        td = link_to t(fund.name), admin_fund_path(fund)
+        
+        td.actions
+          = btn_group do
+            li = btn_to_review admin_fund_path(fund)
+            /li = btn_to_edit   edit_admin_users_manager_path(manager)
+            li.divider
+            li = btn_to_delete admin_fund_path(fund)
+

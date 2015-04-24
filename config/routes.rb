@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resource  :dashboard, only: :show
+    resources :funds
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

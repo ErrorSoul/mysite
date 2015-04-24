@@ -15,9 +15,9 @@ html.no-js
     meta content="width=1200" name="viewport" /
 
     = stylesheet_link_tag 'admin/application', media: 'all'
-    
+
     = csrf_meta_tags
-   
+
     body
       = render partial: 'shared/navbar'
 
@@ -25,8 +25,7 @@ html.no-js
         .row
           .col-sm-12
             = flash_messages
-            = yield 
-  
+            = yield
+
       .javascripts
         = javascript_include_tag 'application'
-    

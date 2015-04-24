@@ -1,0 +1,21 @@
+.form-horizontal
+  .panel.panel-default
+    .panel-heading
+      h4.panel-title = t :funds
+    .panel-body
+      .form-group
+        label.col-sm-2.control-label = t :name
+        .col-sm-4
+          p.form-control-static = @fund.name
+
+      .form-group
+        label.col-sm-2.control-label = t :content
+        .col-sm-4
+          p.form-control-static = @fund.content
+
+
+  .form-group.form-actions
+    .col-sm-offset-2.col-sm-4
+      = btn_sm_to_edit edit_admin_fund_path(@fund), class: 'btn-block'
+      = btn_sm_to_back admin_funds_path, class: 'btn-block-left'
+      = btn_sm_to_delete admin_fund_path(@fund), class: 'btn-block-right'

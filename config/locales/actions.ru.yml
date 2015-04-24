@@ -1,0 +1,35 @@
+ru:
+  actions:
+    actions:  'Действия'
+    action:   'Действие'
+    enter:    'Войти'
+    back:     'Назад'
+    cancel:   'Отменить'
+    edit:     'Редактировать'
+    editing:  'Редактирование'
+    delete:   'Удалить'
+    create:   'Создать'
+    add:      'Добавить'
+    save:     'Сохранить'
+    review:   'Просмотр'
+    select:   'Сделайте выбор'
+    continue: 'Продолжить'
+    find:     'Найти'
+    write:    'Написать'
+    send :    'Повторная отправка смс'
+    check:    'Проверить'
+    dwload:   'Cкачать за все время'
+    period:   'Cкачать за период'
+    change:   'Изменить'
+
+    #
+    # Print, Files
+    #
+    print: 'Печать'
+    pdf: 'pdf'
+    docx: 'docx'
+    odt: 'odt'
+
+    fill_registration_form: 'Заполните регистрационную форму'
+    select_agent_type:      'Укажите тип Агента'
+    select_type:            'Укажите тип'
