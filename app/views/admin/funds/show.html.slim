@@ -10,8 +10,8 @@
 
       .form-group
         label.col-sm-2.control-label = t :content
-        .col-sm-4
-          p.form-control-static = @fund.content
+        .col-sm-12
+          p.form-control-static = @fund.content.html_safe
 
 
   .form-group.form-actions

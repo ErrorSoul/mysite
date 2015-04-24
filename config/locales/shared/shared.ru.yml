@@ -1,5 +1,5 @@
 ru:
-  page_title: 'AFinance'
+  page_title: 'NSKA'
 
   email: 'Email'
   password: 'Пароль'
@@ -10,3 +10,8 @@ ru:
   sign_into:     'Войти'
 
   sign_in:       'Войти'
+  sign_out:      'Выйти'
+
+  fund:          'Фонд'
+  funds:         'Фонды'
+  content:       'Содержание'

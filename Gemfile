@@ -18,6 +18,7 @@ gem 'jquery-ui-rails'
 # Twitter Bootstrap
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass', '~> 4.2.0'
 
 # Markup
 gem 'slim'
@@ -31,6 +32,9 @@ gem 'carrierwave'
 
 # Breadcrumbs
 gem 'gretel'
+
+# Editor
+gem "wysiwyg-rails"
 
 group :development do
   gem 'puma'

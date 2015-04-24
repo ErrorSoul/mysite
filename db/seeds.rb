@@ -14,10 +14,10 @@ Admin.create!(
 %w(
   nska
   hotey
-  isu-capital
-  investment
+  isu_capital
+  capital_investment
   strategic
-  isu-ai
+  isu_ai
 ).each do |name|
   Fund.create!(name: name, content: "")
 end

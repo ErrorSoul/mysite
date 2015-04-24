@@ -63,25 +63,7 @@ article.content role="main"
         .tac
           h1 Фонды в управлении
           p.after_title Какой-то интересный текст о том, что у компании есть разные фонды, они хранят деньги и вообще все здорово
-        .after_title.grey_links
-          a.link href="funds/nska.html"
-            .image style=("background-image: url(#{image_path('links/house.png')})") 
-            .name НСКА-Новостройки
-          a.link href="funds/hotey.html"
-            .image style=("background-image: url(#{image_path('links/wallet.png')})") 
-            .name ГФТ-Хотей
-          a.link href="funds/isu-capital.html"
-            .image style=("background-image: url(#{image_path('links/home.png')})") 
-            .name ИСУ-капитал
-          a.link href="funds/capital_investment.html"
-            .image style=("background-image: url(#{image_path('links/case.png')})") 
-            .name Капитальные инвестиции
-          a.link href="funds/strategic.html"
-            .image style=("background-image: url(#{image_path('links/move.png')})") 
-            .name Стратегические инвестиции
-          a.link href="funds/isu-ai.html"
-            .image style=("background-image: url(#{image_path('links/grid.png')})") 
-            .name ИСУ-А1
+        = render partial: 'funds_table'
   section.common.bigger
     .outta_image.load_me_im data-bg=image_path('content/stat_bg.jpg')
     .p_block

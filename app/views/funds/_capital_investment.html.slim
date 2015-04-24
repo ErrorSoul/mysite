@@ -1,0 +1,89 @@
+section.white_chamber.rel.funds
+  .outta_image.load_me_im data-bg=image_path("content/funds_capital_bg.jpg") style=("background-image: url(#{image_path('content/funds_capital_bg.jpg')})") 
+  .p_block
+    .container
+      .slide_info
+        = image_tag("slider/case.png", class: "slide_im")
+        
+        h1 Капитальные инвестиции
+        p Стратегический маркетинг, согласно Ф.Котлеру, специфицирует нестандартный подход. Можно предположить, что психологическая среда синхронизирует обществвенный целевой сегмент рынка. Бренд, не меняя концепции, изложенной выше, решительно детерминирует баинг и селлинг.
+section.simple_text
+  .p_block.p_vertival
+    article.container
+      h1 О фонде
+      .text.after_title
+        = @fund.content.html_safe
+nav.tabs_nav.tabs data-target="1" 
+  .p_block
+    ul.container.col-container
+      li.active Сводная информация
+      li Стратегия управления
+      li Условия инвестирования
+section.simple_text.b_gray.tabs_container.tabs-container data-id="1" 
+  article.p_block.p_vertival.container.text.tab.active
+    table.t1
+      tbody
+        tr
+          th Категория
+          td Инвестиции долевого участия в строительстве
+        tr
+          th Тип
+          td ЗПИФ (для неквалифицированных инвесторов)
+        tr
+          th Дата основания
+          td Май 2012
+        tr
+          th Агенты по продажам
+          td ООО «АНКОР ИНВЕСТ», ООО «СФГ»
+        tr
+          th Валюта
+          td Рубли
+        tr
+          th Управляющая компания
+          td ЗАО «УК ГФТ Капитал»
+        tr
+          th Регистратор
+          td Первый Специализированный Депозитарий
+        tr
+          th Депозитарий
+          td Первый Специализированный Депозитарий
+        tr
+          th Оценщик
+          td Оценка, залоги, финансы
+        tr
+          th Аудитор
+          td Профит Хаус. Финансы и Аудит
+        tr
+          th Листинг
+          td ММВБ-РТС
+  article.p_block.p_vertival.container.text.tab
+    ul
+      li Покупка объектов жилой недвижимости на стадии строительства в соответствии с 214 ФЗ
+      li Тщательный процесс отбора объектов и застройщиков
+      li Активная работа с застройщиками, получение скидок, контроль выполнения обязательств
+      li Обеспечение целевого прироста стоимости пая
+      li Обеспечение ликвидности пая и возможности выхода из фонда в любой момент через вторичный рынок
+  article.container.text.tab
+    table.t1
+      tbody
+        tr
+          th Вложение средств
+          td Ежеквартально
+        tr
+          th Изъятие средств
+          td Вторичный рынок
+        tr
+          th Минимальный вклад
+          td 100 000 рублей
+        tr
+          th Пополнение счета
+          td 100 000 рублей
+        tr
+          th Комиссия за управление
+          td 1-2%
+        tr
+          th Комиссия за успех
+          td 20%
+        tr
+          th Расчет стоимости пая
+          td Ежемесяч
