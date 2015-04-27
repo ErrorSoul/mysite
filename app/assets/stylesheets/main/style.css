@@ -105,7 +105,7 @@ section.breadcrumbs a {
   font-weight: normal;
   padding-right: 26px;
   margin-right: 16px;
-  background: url('../img/ico/bc_corner.png') no-repeat center right transparent;
+  background: url('/images/ico/bc_corner.png') no-repeat center right transparent;
   display: inline-block;
 }
 section.breadcrumbs a:hover {text-decoration: none;}
@@ -345,7 +345,7 @@ header:after {
     float: right;
     margin: 5px 0 0 10px;
     padding: 0 0 0 30px;
-    background: url("../img/ico/phone.png") 0 50% no-repeat transparent;
+    background: url("/images/ico/phone.png") 0 50% no-repeat transparent;
     text-decoration: none;
 }
 .main_slider {
@@ -386,7 +386,7 @@ header:after {
 }
 
 .big-button.lic {border: 1px solid #e2e2e2;padding: 36px 40px; text-decoration: none;margin-top: 50px;display: block;}
-.big-button.lic span {background: url('../img/ico/lic.png') left center no-repeat transparent;display: block;padding-left: 126px;height: 88px;line-height: 88px;font-size: 36px;font-family: 'HelveticaNeue-Thin';color: #000000;}
+.big-button.lic span {background: url('/images/ico/lic.png') left center no-repeat transparent;display: block;padding-left: 126px;height: 88px;line-height: 88px;font-size: 36px;font-family: 'HelveticaNeue-Thin';color: #000000;}
 .controllr_wrap {
     display: block;
     position: relative;
@@ -398,7 +398,7 @@ header:after {
     position: absolute;
     right: 0;
     top: 255px;
-    background: url("../img/ico/sl_ar.png") 50% 50% no-repeat transparent;
+    background: url("/images/ico/sl_ar.png") 50% 50% no-repeat transparent;
     cursor: pointer;
 }
 .form_element {
@@ -460,7 +460,7 @@ input.success {
     border-color: #62b772;
     color: #62b772;
     padding-right: 45px;
-    background: url("../img/ico/i_suc.png") 100% 50% no-repeat transparent;
+    background: url("/images/ico/i_suc.png") 100% 50% no-repeat transparent;
 }
 input.error {
     filter: alpha(opacity=100);
@@ -469,7 +469,7 @@ input.error {
     border-color: #e54b4b;
     color: #e54b4b;
     padding-right: 45px;
-    background: url("../img/ico/i_err.png") 100% 50% no-repeat transparent;
+    background: url("/images/ico/i_err.png") 100% 50% no-repeat transparent;
 }
 .grey_links {
     width: 100%;
@@ -668,7 +668,7 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
 .funds {height: 530px;}
 .subtext {line-height: 24px;font-size: 14px;color: #989898;}
 .text ul {padding-bottom: 40px;}
-.text ul li {display: list-item;list-style-image: url("../img/ico/li.png");padding-left: 16px;margin-left: 20px;line-height: 45px;font-size: 16px;font-family: 'HelveticaNeue-Italic';font-style: italic;font-weight: 400;font-stretch: normal;}
+.text ul li {display: list-item;list-style-image: url("/images/ico/li.png");padding-left: 16px;margin-left: 20px;line-height: 45px;font-size: 16px;font-family: 'HelveticaNeue-Italic';font-style: italic;font-weight: 400;font-stretch: normal;}
 
 .tabs_nav {text-align: center;}
 .tabs_nav ul li {font-size: 24px;color: #b4b4b4;line-height: 28px;padding-bottom: 30px;border-bottom: 8px solid transparent;display: inline-block;cursor: pointer;}
@@ -689,8 +689,8 @@ table.t1.docs tbody td {text-align: left; vertical-align: middle;padding-left: 5
 table.t1.docs tbody td:last-child {text-align: right;width: 20%;color: #9e9e9e;padding-left: 10px;}
 table.t1.docs a{text-decoration: none;color: #6f6f6f;}
 table.t1.docs a:hover{color: #000000;}
-table.t1 td.xls {background: url('../img/files/xls.png') center left no-repeat transparent;}
-table.t1 td.xls:hover {background: url('../img/files/xls_a.png') center left no-repeat transparent;}
+table.t1 td.xls {background: url('/images/files/xls.png') center left no-repeat transparent;}
+table.t1 td.xls:hover {background: url('/images/files/xls_a.png') center left no-repeat transparent;}
 
 table.t1.report {font-size: 14px;}
 table.t1.report thead th, table.t1.report tbody th, table.t1.report tbody td {font-size: 14px;}
@@ -721,7 +721,7 @@ table.t1 thead th.docum {width: 80px;}
 table.t1 tbody td.docum {width: 80px;text-align: right;}
 
 table.t1.raiting tbody td.stage {width:60px;background-repeat: no-repeat;background-position: center center;background-color: transparent;}
-table.t1.raiting tbody td.stage.s3 {background-image: url('../img/ico/s3.png')}
+table.t1.raiting tbody td.stage.s3 {background-image: url('/images/ico/s3.png')}
 
 table.t1.raiting.analys tbody td.b_gray {padding: 25px 15px;}
 table.t1.raiting.analys tbody th.b_gray {color: #656565;width: 120px;padding: 25px 15px;}
@@ -734,10 +734,10 @@ table.t1.review td:last-child {text-align: right;color: #9e9e9e}
 
 a.docum, div.docum {display: inline-block;height: 36px;padding-left:51px;background-repeat: no-repeat;background-position: left center;background-color: transparent;text-decoration: none;color: #6f6f6f;}
 a.docum:hover, div.docum:hover{color: #000000;}
-.docum.pdf {background-image: url('../img/files/pdf.png')}
-.docum.pdf:hover {background-image: url('../img/files/pdf_a.png')}
-.docum.xls {background-image: url('../img/files/xls.png')}
-.docum.xls:hover {background-image: url('../img/files/xls_a.png')}
+.docum.pdf {background-image: url('/images/files/pdf.png')}
+.docum.pdf:hover {background-image: url('/images/files/pdf_a.png')}
+.docum.xls {background-image: url('/images/files/xls.png')}
+.docum.xls:hover {background-image: url('/images/files/xls_a.png')}
 
 table.newslist {width: 100%;}
 table.newslist th {font-size: 18px;width: 180px;color: #b8b8b8;vertical-align: top;text-align: left}
@@ -758,7 +758,7 @@ nav.yellbox li {display: block;float: left;padding:0 25px;height: 50px;line-heig
 nav.yellbox li.active {background: #ffd800;color: #000000;cursor: default;}
 
 .accordion .accordion-block {border-bottom: 1px solid #e3e3e3;margin-right: 20%;}
-.accordion .accordion-block .accordion-title {font-family: 'HelveticaNeue-Bold';font-size: 16px;color: #000000;padding: 23px 50px;background: url('../img/ico/accor_ar.png') left center no-repeat transparent;cursor: pointer;}
+.accordion .accordion-block .accordion-title {font-family: 'HelveticaNeue-Bold';font-size: 16px;color: #000000;padding: 23px 50px;background: url('/images/ico/accor_ar.png') left center no-repeat transparent;cursor: pointer;}
 .accordion .accordion-block .accordion-text {padding: 0 50px 23px;display: none;}
 .accordion .accordion-block.active .accordion-text {display: block;}
 
@@ -777,7 +777,7 @@ nav.yellbox li.active {background: #ffd800;color: #000000;cursor: default;}
 .vibor .col-33 {padding: 30px;}
 
 .vibor .num {width: 82px;height: 82px;line-height: 82px;font-family: 'HelveticaNeue-Thin';font-size: 36px;color: #000000;border: 1px solid #00b2ed;text-align: center;margin-bottom: 60px;}
-.vibor .arrow {width: 128px;height: 82px;background: url("../img/ico/long_ar.png") right center no-repeat transparent;margin-right: 30px;}
+.vibor .arrow {width: 128px;height: 82px;background: url("/images/ico/long_ar.png") right center no-repeat transparent;margin-right: 30px;}
 
 section.howto {font-size: 14px;font-family: 'HelveticaNeue-Regular';line-height: 25px;}
 section.howto ul li {font-size: 14px;font-family: 'HelveticaNeue-Regular'!important;font-style: normal!important;line-height: 25px;padding-bottom: 15px;}
@@ -786,12 +786,12 @@ section.howto h3 {font-size: 14px;font-weight: bold;font-family: 'HelveticaNeue-
 section.howto .col-33 {padding: 40px;position: relative}
 
 section.howto .square {display: block;margin: 0 auto 50px;width: 165px;height: 165px;border: 1px solid #ffd800;background-color: transparent;background-position: center center;background-repeat: no-repeat;}
-section.howto .square.pen {background-image: url("../img/ico/pen.png")}
-section.howto .square.arr {background-image: url("../img/ico/arrow.png")}
-section.howto .square.mail {background-image: url("../img/ico/mail.png")}
-section.howto .arrow {width: 128px;height: 82px;background: url("../img/ico/long_ar2.png") right center no-repeat transparent;position: absolute;top: 80px;right: -70px;}
+section.howto .square.pen {background-image: url("/images/ico/pen.png")}
+section.howto .square.arr {background-image: url("/images/ico/arrow.png")}
+section.howto .square.mail {background-image: url("/images/ico/mail.png")}
+section.howto .arrow {width: 128px;height: 82px;background: url("/images/ico/long_ar2.png") right center no-repeat transparent;position: absolute;top: 80px;right: -70px;}
 
-section.attention .square-mailb {display: block;width: 185px;height: 185px;border: 1px solid #cacaca;background-color: transparent;background-position: center center;background-repeat: no-repeat;background-image: url("../img/ico/mail_b.png");position: absolute;left: 0;top: 0}
+section.attention .square-mailb {display: block;width: 185px;height: 185px;border: 1px solid #cacaca;background-color: transparent;background-position: center center;background-repeat: no-repeat;background-image: url("/images/ico/mail_b.png");position: absolute;left: 0;top: 0}
 section.attention h3 {color: #000000;font-size: 18px;}
 section.attention {font-size: 16px;}
 section.attention .toright {display: block;height: 115px;border: 1px solid #cacaca;border-left: 0;padding: 35px;margin-left: 185px;}
@@ -883,12 +883,12 @@ section.attention .toright {display: block;height: 115px;border: 1px solid #caca
 .partners .col-33 {text-align:  center;}
 .partners a {width:231px;height:200px; text-align: center;font-family: 'HelveticaNeue-Thin';font-size: 24px;color: #122437;text-decoration: none;display: inline-block;border: 1px solid #e4e4e4;margin: 25px;vertical-align: middle;padding: 130px 50px 0}
 .partners a:hover {color: #ffffff;}
-.partners a.bank:hover {background: url("../img/ico/1.jpg") center center no-repeat transparent;}
-.partners a.private:hover{background: url("../img/ico/2.jpg") center center no-repeat transparent;}
-.partners a.develop:hover{background: url("../img/ico/3.jpg") center center no-repeat transparent;}
-.partners a.microf:hover{background: url("../img/ico/5.jpg") center center no-repeat transparent;}
-.partners a.lander:hover{background: url("../img/ico/4.jpg") center center no-repeat transparent;}
-.partners a.lombard:hover{background: url("../img/ico/6.jpg") center center no-repeat transparent;}
+.partners a.bank:hover {background: url("/images/ico/1.jpg") center center no-repeat transparent;}
+.partners a.private:hover{background: url("/images/ico/2.jpg") center center no-repeat transparent;}
+.partners a.develop:hover{background: url("/images/ico/3.jpg") center center no-repeat transparent;}
+.partners a.microf:hover{background: url("/images/ico/5.jpg") center center no-repeat transparent;}
+.partners a.lander:hover{background: url("/images/ico/4.jpg") center center no-repeat transparent;}
+.partners a.lombard:hover{background: url("/images/ico/6.jpg") center center no-repeat transparent;}
 @media screen and (max-width: 1400px) {
     .p_block {
         padding: 0 40px;
