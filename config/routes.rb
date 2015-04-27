@@ -15,5 +15,9 @@ Rails.application.routes.draw do
     resources :funds
   end
 
+  NAMES.each do |name|
+    get name.to_sym, to: "main_pages##{name}", as: name
+  end
+
   resources :funds, only: [:index, :show]
 end

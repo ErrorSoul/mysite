@@ -1,6 +1,8 @@
 class MainPagesController < ApplicationController
-
-  def main
+  Page::NAMES.each do |name|
+    define_method name do
+      @page = Page.find_by(name: name)
+      render :show
+    end
   end
-
 end

@@ -24,5 +24,6 @@
 //= require froala_editor.min
 //= require langs/ru.js
 //= require helper
+//= require jquery.mCustomScrollbar.concat.min
 //= require owl.carousel.min
 //= require vendor/jquery.fancybox.pack

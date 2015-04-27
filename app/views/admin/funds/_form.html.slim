@@ -1,9 +1,9 @@
 = f.panel :fund, title: t(:fund) do
-  
+
   .form-group
     label.col-sm-2.control-label = t :name
     .col-sm-4
-      p.form-control-static = @fund.name
+      p.form-control-static = t @fund.name
 
   = f.group :content do
     = f.label :content, t(:content), class: 'col-sm-2 required'
