@@ -1,0 +1,5 @@
+- if @page.name.in? Page::PARTIALS
+  = render partial: "#{@page.name}"
+- else
+  = @page.content.html_safe
+  

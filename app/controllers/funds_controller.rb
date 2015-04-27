@@ -1,7 +1,6 @@
 class FundsController < ApplicationController
-
   def index
-    @fund = Fund.first
+    @page = Page.find_by(name: 'funds')
   end
 
   def show

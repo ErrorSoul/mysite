@@ -1,12 +1,33 @@
 = f.panel :fund, title: t(:fund) do
-  
+
   .form-group
     label.col-sm-2.control-label = t :name
     .col-sm-4
-      p.form-control-static = @fund.name
+      p.form-control-static = t @fund.name
 
   = f.group :content do
     = f.label :content, t(:content), class: 'col-sm-2 required'
     .col-sm-12
       = f.text_area :content, rows: 5, class: 'js-editor form-control'
       = f.hint :content
+
+  = f.panel :fund_info, title: t(:fund_info) do
+    = f.group :info do
+      = f.label :info, t(:fund_info), class: 'col-sm-2 required'
+      .col-sm-12
+        = f.text_area :info, rows: 5, class: 'js-editor form-control'
+        = f.hint :info
+
+  = f.panel :fund_strategy, title: t(:fund_strategy) do
+    = f.group :strategy do
+      = f.label :strategy, t(:fund_strategy), class: 'col-sm-2 required'
+      .col-sm-12
+        = f.text_area :strategy, rows: 5, class: 'js-editor form-control'
+        = f.hint :strategy
+
+  = f.panel :fund_condition, title: t(:fund_condition) do
+    = f.group :condition do
+      = f.label :condition, t(:fund_condition), class: 'col-sm-2 required'
+      .col-sm-12
+        = f.text_area :condition, rows: 5, class: 'js-editor form-control'
+        = f.hint :condition

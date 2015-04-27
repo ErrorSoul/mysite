@@ -1,5 +1,4 @@
 class Admin::FundsController < Admin::BaseController
-
   before_action :find_fund,  only: [:show, :edit, :update, :destroy]
 
   def index
@@ -28,5 +27,4 @@ class Admin::FundsController < Admin::BaseController
   def find_fund
     @fund = Fund.find params[:id]
   end
-
 end

@@ -15,3 +15,21 @@ ru:
   fund:          'Фонд'
   funds:         'Фонды'
   content:       'Содержание'
+  services:      'Услуги'
+
+  fund_info:      'Сводная информация'
+  fund_strategy:  'Стратегия управления'
+  fund_condition: 'Условия инвестирования'
+  pages:          'Cтраницы'
+  about:          'О компании'
+  contact:        'Контакт'
+
+  # FUNDS
+
+  main:     'Главная страница'
+  nska:     'НСКА-Новостройки'
+  hotey:    'ГФТ-Хотей'
+  isu_capital: 'ИСУ-Капитал'
+  capital_investment:  'Капитальные инвестиции'
+  strategic: 'Стратегические инвестиции'
+  isu_ai:     'ИСУ-А1'

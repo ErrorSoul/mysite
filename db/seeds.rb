@@ -12,6 +12,7 @@ Admin.create!(
   )
 
 %w(
+  main
   nska
   hotey
   isu_capital

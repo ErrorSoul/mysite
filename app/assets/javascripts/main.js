@@ -38,12 +38,12 @@ $(document).ready(function(){
     $('.accordion').on('click', '.accordion-title', function(){
       $(this).closest('.accordion-block').toggleClass('active');
     })
-  }
+  }/*
   $(".fancybox").fancybox();
   $("form").validate();
   $('.attr input[name="phone"]').inputmask("phone", {
 
-  });
+  });*/
 })
 
 $(window).load(function(){
@@ -97,7 +97,7 @@ function initTimelines() {
     mouseWheel:{ scrollAmount: 200}
   });
 }
-
+/*
 jQuery.validator.setDefaults({
   highlight: function(element, errorClass) {
     $(element).closest('.form_element').addClass('has-error');
@@ -189,3 +189,4 @@ jQuery.extend($.inputmask.defaults, {
     });
   }
 });
+*/

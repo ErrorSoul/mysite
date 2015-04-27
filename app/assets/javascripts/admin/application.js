@@ -30,3 +30,12 @@
 //= require plugins/fullscreen.min.js
 //= require plugins/urls.min.js
 //= require plugins/inline_styles.min.js
+//= require plugins
+
+//= require jquery.validate.min
+//= require jquery.validate.additional-methods.min
+//= require jquery.validate.messages_ru.min
+//= require jquery.inputmask
+//= require jquery.inputmask.phone.extensions
+//= require main
+//= require owl.carousel.min

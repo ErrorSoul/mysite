@@ -1,0 +1,14 @@
+ru:
+  flash:
+
+    funds:
+      success:
+        updated: 'Фонд успешно обнавлен'
+
+    pages:
+      success:
+        updated: 'Cтраница успешно обнавлена'
+
+    password:
+      success:
+        updated: 'Ваш пароль успешно обновлен'

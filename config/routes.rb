@@ -11,7 +11,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resource  :dashboard, only: :show
+    resources :pages
     resources :funds
+  end
+
+  NAMES.each do |name|
+    get name.to_sym, to: "main_pages##{name}", as: name
   end
 
   resources :funds, only: [:index, :show]

@@ -13,8 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require plugins
-//= require owl.carousel.min
-//= require vendor/jquery.fancybox.pack
+
 //= require jquery.validate.min
 //= require jquery.validate.additional-methods.min
 //= require jquery.validate.messages_ru.min
@@ -25,3 +24,6 @@
 //= require froala_editor.min
 //= require langs/ru.js
 //= require helper
+//= require jquery.mCustomScrollbar.concat.min
+//= require owl.carousel.min
+//= require vendor/jquery.fancybox.pack
