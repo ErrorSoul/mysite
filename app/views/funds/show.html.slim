@@ -1,4 +1,7 @@
 /= render partial:  "#{@fund.name}"
+
+- breadcrumb @fund
+
 = @fund.content.html_safe
 
 nav.tabs_nav.tabs data-target="1"
