@@ -1,5 +1,6 @@
 - if @page.name.in? Page::PARTIALS
   = render partial: "#{@page.name}"
 - else
+  = render partial: "breadcrumb"
   = @page.content.html_safe
   

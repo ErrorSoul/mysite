@@ -15,18 +15,23 @@ html.no-js
     meta content="width=1200" name="viewport" /
 
     = stylesheet_link_tag 'main/application', media: 'all'
-    
+
     = csrf_meta_tags
-   
-   
+
   body
     /![if lt IE 7]
       | <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p
     .wrapper
       .maincontent
         = render partial: 'navbar_main'
+        - unless @main
+          section.breadcrumbs
+            .p_block
+              .container
+                == breadcrumbs  separator: "",
+                                display_single_fragment: true,
+                                class: "chet", container_tag: :h1
         = yield
       = render partial: 'footer_main'
     .javascripts
       = javascript_include_tag 'application'
-   
