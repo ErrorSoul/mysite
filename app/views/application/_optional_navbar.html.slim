@@ -1,0 +1,20 @@
+- if @fund
+  nav.leftbc.col-container
+    .inner
+      .thispage О фонде
+      ul
+        li
+          a href="#"  Раскрытие информации
+        li
+          a href="#"  Документы фонда
+        li
+          a href="#"  Отчетность
+        li
+          a href="#"  Стоимость пая и СЧА, динамика доходности
+
+- if @page && @page.name == "about"
+  nav.yellowbord.col-container
+    a.inner href="comand.html"  Команда
+    a.inner href="opening.html"  Раскрытие информации
+    a.inner href="partners.html"  Партнерам
+    a.inner href="docs.html"  Документы

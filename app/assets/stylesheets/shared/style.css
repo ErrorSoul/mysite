@@ -120,12 +120,12 @@ section.breadcrumbs h1 {
 section.breadcrumbs nav.leftbc {position: absolute;right: 0;top: -30px;bottom: -30px;}
 section.breadcrumbs nav.leftbc:before {content: '';display: block;float: left;height: 90px;width: 200px;background: #1f3853; background: linear-gradient(to left, #1f3853 30%,transparent);}
 section.breadcrumbs nav.leftbc .inner {border-left: 1px solid #346090;padding: 30px 50px 30px 15px;cursor: pointer;float: left;position: relative;background: #1f3853;}
-section.breadcrumbs nav.leftbc .inner .thispage {color: #aaaaaa;font-family: 'HelveticaNeue-Light';font-size: 18px;background: url('../img/ico/nav_inner.png') no-repeat center left transparent;padding-left: 38px;}
-section.breadcrumbs nav.leftbc .inner.analitycs .thispage {background: url('../img/ico/nav_analytics.png') no-repeat center left transparent;}
+section.breadcrumbs nav.leftbc .inner .thispage {color: #aaaaaa;font-family: 'HelveticaNeue-Light';font-size: 18px;background: url('/images/ico/nav_inner.png') no-repeat center left transparent;padding-left: 38px;}
+section.breadcrumbs nav.leftbc .inner.analitycs .thispage {background: url('/images/ico/nav_analytics.png') no-repeat center left transparent;}
 
 section.breadcrumbs nav.leftbc .inner.active {background: #346090; }
-section.breadcrumbs nav.leftbc .inner.active .thispage {color: #ffffff;background: url('../img/ico/nav_inner-a.png') no-repeat center left transparent;}
-section.breadcrumbs nav.leftbc .inner.active.analitycs .thispage {background: url('../img/ico/nav_analytics-a.png') no-repeat center left transparent;}
+section.breadcrumbs nav.leftbc .inner.active .thispage {color: #ffffff;background: url('/images/ico/nav_inner-a.png') no-repeat center left transparent;}
+section.breadcrumbs nav.leftbc .inner.active.analitycs .thispage {background: url('/images/ico/nav_analytics-a.png') no-repeat center left transparent;}
 section.breadcrumbs nav.leftbc .inner ul {
   background: #ffffff;
   box-shadow: 0 0 20px #666666;
