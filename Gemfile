@@ -28,7 +28,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 
 # File Uploader
-gem 'carrierwave'
+gem 'carrierwave', '0.8.0'
 
 # Breadcrumbs
 gem 'gretel'

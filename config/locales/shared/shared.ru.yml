@@ -23,6 +23,9 @@ ru:
   pages:          'Cтраницы'
   about:          'О компании'
   contact:        'Контакт'
+  assets:         'Файлы'
+  asset:          'Файл'
+  files:          'Файлы'
 
   # FUNDS
 
@@ -33,3 +36,8 @@ ru:
   capital_investment:  'Капитальные инвестиции'
   strategic: 'Стратегические инвестиции'
   isu_ai:     'ИСУ-А1'
+
+
+  # PAGES
+
+  open_info:  'Раскрытие информации'

@@ -23,24 +23,8 @@ module FormBuilders
       end
 
       def file_field(field, options = {})
-        filename =
-          content_tag :div, class: 'form-control' do
-            [ content_tag(:i, '', class: 'glyphicon glyphicon-file fileinput-exists'),
-              content_tag(:span, '', class: 'fileinput-filename')
-            ].join.html_safe
-          end
-
-        fileinput =
-          content_tag :span, class: 'input-group-addon btn btn-default btn-file' do
-            [ content_tag(:span, I18n.t('files'), class: 'fileinput-new'),
-              content_tag(:span, I18n.t('actions.change'), class: 'fileinput-exists'),
-              super(field, options)
-            ].join.html_safe
-          end
-
-        content = [filename, fileinput].join.html_safe
-
-        content_tag :div, content, class: 'fileinput fileinput-new input-group'
+        prepend_class %w(form-control-static), options
+        super field, options
       end
 
     end

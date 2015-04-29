@@ -3,11 +3,11 @@ ru:
 
     funds:
       success:
-        updated: 'Фонд успешно обнавлен'
+        updated: 'Фонд успешно обновлен'
 
     pages:
       success:
-        updated: 'Cтраница успешно обнавлена'
+        updated: 'Cтраница успешно обновлена'
 
     password:
       success:

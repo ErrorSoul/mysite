@@ -1,6 +1,7 @@
-= bootstrap_form_for @page, url: admin_page_path(@page) do |f|
+= bootstrap_form_for @page, url: admin_page_path(@page), html: { multipart: true } do |f|
   = render partial: 'form', locals: { f: f, resource: @page }
-
+  - if @page.name.in? Page::ASSETS
+    = render partial: 'assets_form', locals: { f: f, resource: @page, assets: @page.assets }
   .form-group.form-actions
     .col-sm-offset-2.col-sm-4
       = btn_sm_to_save '#', class: 'btn-block'
