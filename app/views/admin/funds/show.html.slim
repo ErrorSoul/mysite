@@ -34,6 +34,16 @@
       .col-sm-12
         p.form-control-static = @fund.condition.html_safe
 
+  .panel.panel-default
+    .panel-heading
+      h4.panel-title = t :funds_pages
+    .panel-body
+      .col-sm-12
+        ul
+          - @fund.pages.each do |page|
+            li
+              = link_to t(page.name), admin_page_path(page)
+
   .form-group.form-actions
     .col-sm-offset-2.col-sm-4
       = btn_sm_to_edit edit_admin_fund_path(@fund), class: 'btn-block'

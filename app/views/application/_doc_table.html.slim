@@ -5,5 +5,4 @@
         tr
           td.xls
             = link_to  asset.name, '#'
-          td 27.01.2015 г., 17:45
-     
+          td = asset.created_at.strftime("%d.%m.%Y")

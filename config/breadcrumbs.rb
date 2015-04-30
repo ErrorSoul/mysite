@@ -13,7 +13,7 @@ crumb :fund do |fund|
 end
 
 crumb :page do |page|
-  link t(page.name), page.name
+  link t(page.name), main_page_path(page)
   parent :root
 end
 

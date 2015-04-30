@@ -1,16 +1,12 @@
-- if @fund
+- fund = @fund || @page.pageable
+- if fund
   nav.leftbc.col-container
     .inner
       .thispage О фонде
       ul
-        li
-          a href="/main_pages/6"  Раскрытие информации
-        li
-          a href="/main_pages/7"  Документы фонда
-        li
-          a href="#"  Отчетность
-        li
-          a href="#"  Стоимость пая и СЧА, динамика доходности
+        - fund.pages.each do |page|
+          li
+            = link_to t(page.name), main_page_path(page)
 
 - if @page && @page.name == "about"
   nav.yellowbord.col-container
