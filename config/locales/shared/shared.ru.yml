@@ -26,6 +26,7 @@ ru:
   assets:         'Файлы'
   asset:          'Файл'
   files:          'Файлы'
+  docs:           'Документы фонда'
 
   # FUNDS
 
@@ -41,3 +42,6 @@ ru:
   # PAGES
 
   open_info:  'Раскрытие информации'
+
+
+  destroy: 'Удалить?'
