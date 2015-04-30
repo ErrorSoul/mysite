@@ -1,0 +1,9 @@
+.text.after_title
+  table.t1.docs
+    tbody
+      - @page.assets.each do |asset|
+        tr
+          td.xls
+            = link_to  asset.name, '#'
+          td 27.01.2015 г., 17:45
+     

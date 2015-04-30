@@ -1,0 +1,38 @@
+= f.panel :asset, title: t(:assets) do
+  - old_scans  = assets.reject(&:new_record?)
+
+  - old_scans.each.with_index do |asset, index|
+
+    = f.fields_for :assets_attributes, asset do |sf|
+      = sf.group :asset, class: "old_assets" do
+        = sf.label :name, t(:name), class: 'col-sm-2'
+
+        .col-sm-6
+          = sf.text_field :name, name: "page[assets_attributes][#{index}][name]"
+
+      = sf.group
+        = sf.hidden_field :id, name: "page[assets_attributes][#{index}][id]"
+        = sf.label :name, sf.object.file_name.truncate(15), class: 'col-sm-2'
+        label.control-label
+          = safe_join [ t(:destroy), sf.check_box(:_destroy, name: "page[assets_attributes][#{index}][_destroy]")]
+    hr
+
+  = f.fields_for :assets_attributes,  resource.assets.build do |sf|
+     = sf.group :asset, class: "asset_class" do
+       = sf.label :asset, t(:asset), class: 'col-sm-2'
+
+       .col-sm-2
+         - len = old_scans.length
+         = sf.file_field :asset, name: "page[assets_attributes][#{len}][asset]", data: {num: "#{len}"}
+         /= f.hint [options[:rel], :file], translate_for([hint_prefix, options[:type]].join)
+         /= link_to t(:add), '#', class: 'btn btn-success add_scans'
+
+     = sf.group :name, class: "name_class" do
+       = sf.label :name, t(:name), class: 'col-sm-2'
+
+       .col-sm-6
+         - len = old_scans.length
+         = sf.text_field :name, name: "page[assets_attributes][#{len}][name]", data: {num: "#{len}"}, class: 'js-editor form-control'
+         = f.hint :name
+
+     = link_to t(:add), '#', class: 'btn btn-success add_scans col-xs-6'
