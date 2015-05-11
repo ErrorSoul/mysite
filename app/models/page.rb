@@ -10,4 +10,8 @@ class Page < ActiveRecord::Base
 
   accepts_nested_attributes_for :assets, allow_destroy: true, reject_if: proc { |attributes| attributes['name'].blank? }
 
+  def fund
+    pageable if pageable.class.to_s == 'Fund'
+  end
+
 end

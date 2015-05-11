@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resource  :dashboard, only: :show
     resources :pages
-    resources :funds
+    resources :funds do
+      namespace :nested do
+        resources :pages, only: :index
+      end
+    end
   end
 
   NAMES.each do |name|

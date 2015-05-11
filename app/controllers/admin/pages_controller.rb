@@ -12,6 +12,9 @@ class Admin::PagesController < Admin::BaseController
   def update
     if @page.update_attributes page_params
       flash[:success] = t 'flash.pages.success.updated'
+      if @page.fund
+        redirect_to admin_fund_nested_pages_path(@page.fund) and return
+      end
       redirect_to admin_pages_url
     else
       render :edit
