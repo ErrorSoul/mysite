@@ -2,7 +2,8 @@
 .row
   .col-sm-12
     .col-sm-2
-      = render partial: "shared/left_menu"
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false }
 
     .col-sm-10
       .form-horizontal
