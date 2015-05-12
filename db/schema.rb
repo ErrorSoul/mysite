@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150512070021) do
+ActiveRecord::Schema.define(version: 20150512102931) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -66,6 +66,15 @@ ActiveRecord::Schema.define(version: 20150512070021) do
     t.integer  "fund_id",    limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "pieces", force: :cascade do |t|
+    t.date     "observ_date"
+    t.decimal  "cost",                  precision: 10, scale: 2
+    t.decimal  "pure_cost",             precision: 10, scale: 2
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.integer  "fund_id",     limit: 4
   end
 
   create_table "quartals", force: :cascade do |t|

@@ -1,0 +1,19 @@
+.actions
+  = btn_sm_to_create  new_admin_fund_nested_piece_path(@fund), class: 'create-period'
+.row
+  .col-sm-12
+    .col-sm-2
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false, period_flag: false, piece_flag: true }
+
+    .col-sm-10
+
+      .panel.panel-default
+        .panel-heading
+          h4.panel-title = t :pieces
+        .panel-body
+          .col-sm-12
+            ul
+              - @fund.pieces.each do |piece|
+                li
+                  = link_to piece.observ_date.try(:strftime, "%d.%m.%Y"), admin_fund_nested_piece_path(@fund, piece)

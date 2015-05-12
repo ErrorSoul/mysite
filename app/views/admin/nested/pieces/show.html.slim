@@ -1,0 +1,30 @@
+.row
+  .col-sm-12
+    .col-sm-2
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false, period_flag: false, piece_flag: true }
+    .col-sm-10
+      .form-horizontal
+        .panel.panel-default
+          .panel-heading
+            h4.panel-title = t :piece
+          .panel-body
+            .form-group
+              label.col-sm-2.control-label = t :observ_date
+              .col-sm-4
+                p.form-control-static = @piece.observ_date.try(:strftime, "%d.%m.%Y")
+
+            .form-group
+              label.col-sm-2.control-label = t :cost
+              .col-sm-4
+                p.form-control-static = @piece.cost
+            
+            .form-group
+              label.col-sm-2.control-label = t :pure_cost
+              .col-sm-4
+                p.form-control-static = @piece.pure_cost
+        .form-group.form-actions
+          .col-sm-offset-2.col-sm-4
+            = btn_sm_to_edit edit_admin_fund_nested_piece_path(@fund, @piece), class: 'btn-block'
+            = btn_sm_to_back admin_fund_nested_pieces_path(@fund), class: 'btn-block-left'
+            = btn_sm_to_delete admin_fund_nested_piece_path(@fund, @piece), class: 'btn-block-right'

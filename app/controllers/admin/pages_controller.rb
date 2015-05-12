@@ -2,7 +2,7 @@ class Admin::PagesController < Admin::BaseController
   before_action :find_page,  only: [:show, :edit, :update, :destroy]
 
   def index
-    @pages = Page.all
+    @pages = Page.where(pageable_id: nil)
   end
 
   def show; end

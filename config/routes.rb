@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       namespace :nested do
         resources :pages, only: :index
         resources :periods
+        resources :pieces
       end
     end
   end
