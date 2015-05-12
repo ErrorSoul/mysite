@@ -1,0 +1,14 @@
+- breadcrumb :period, @fund, @period
+.row
+  .col-sm-12
+    .col-sm-2
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false, period_flag: true }
+    .col-sm-10
+      = bootstrap_form_for @period, url: admin_fund_nested_period_path(@fund, @period), html: { multipart: true } do |f|
+        = render partial: 'form', locals: { f: f, resource: @period }
+
+        .form-group.form-actions
+          .col-sm-offset-2.col-sm-4
+            = btn_sm_to_save '#', class: 'btn-block'
+            = btn_sm_to_cancel admin_fund_nested_periods_path(@fund), class: 'btn-block'

@@ -14,11 +14,13 @@ gem 'therubyracer'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'momentjs-rails'
 
 # Twitter Bootstrap
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 4.2.0'
+gem 'bootstrap3-datetimepicker-rails'
 
 # Markup
 gem 'slim'

@@ -1,0 +1,34 @@
+table.t1.report.after_title
+  thead
+    tr
+      th Тип отчета
+      th 1 квартал
+      th 2 квартал
+      th 3 квартал
+      th 4 квартал
+  tbody
+    - Quartal::TYPES.each do |type|
+      - quart = period.send(type)
+      tr
+        th= t type 
+        td.xls
+          | 
+          = quart.first_d.strftime("%d.%m.%Y") if quart.first_d
+          br/
+          a href="#"  Скачать *xls
+        td.xls
+          |
+          = quart.second_d.strftime("%d.%m.%Y") if quart.second_d
+          br/
+          a href="#"  Скачать *xls
+        td.xls
+          | 
+          = quart.third_d.strftime("%d.%m.%Y") if quart.third_d
+          br/
+          a href="#"  Скачать *xls
+        td.xls
+          |
+          = quart.fourth_d.strftime("%d.%m.%Y") if quart.fourth_d
+          br/
+          a href="#"  Скачать *xls
+

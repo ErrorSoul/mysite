@@ -3,7 +3,7 @@
   .row
     .col-sm-12
       .col-sm-2
-        = render partial: "shared/left_menu", locals: { resource: @page.fund, fund_flag: true }
+        = render partial: "shared/left_menu", locals: { resource: @page.fund, fund_flag: true, period_flag: false }
       .col-sm-10
         = render partial: "page_partial"
 - else

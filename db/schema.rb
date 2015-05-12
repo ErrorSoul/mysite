@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430131644) do
+ActiveRecord::Schema.define(version: 20150512070021) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -60,5 +60,27 @@ ActiveRecord::Schema.define(version: 20150430131644) do
   end
 
   add_index "pages", ["pageable_type", "pageable_id"], name: "index_pages_on_pageable_type_and_pageable_id", using: :btree
+
+  create_table "periods", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "fund_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "quartals", force: :cascade do |t|
+    t.string   "first_q",    limit: 255
+    t.string   "second_q",   limit: 255
+    t.string   "third_q",    limit: 255
+    t.string   "fourth_q",   limit: 255
+    t.integer  "period_id",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "obj_type",   limit: 255
+    t.date     "first_d"
+    t.date     "second_d"
+    t.date     "third_d"
+    t.date     "fourth_d"
+  end
 
 end

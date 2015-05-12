@@ -45,7 +45,7 @@ crumb :admin_page do |page|
   link t(page.name), admin_page_path(page)
 
   if page.fund
-    parent :admin_fund, page.fund
+    parent :funds_pages, page.fund
   else
     parent :admin
   end
@@ -54,6 +54,21 @@ end
 crumb :funds_pages do |fund|
   link t(:funds_pages), admin_fund_path(fund)
   parent :admin_fund, fund
+end
+
+crumb :periods do  |fund|
+  link t(:periods), admin_fund_nested_periods_path(fund)
+  parent :admin_fund, fund
+end
+
+crumb :period_new do |fund|
+  link t(:period_new), "#"
+  parent :periods, fund
+end
+
+crumb :period do |fund, period|
+  link period.name, admin_fund_nested_period_path(fund, period)
+  parent :periods, fund
 end
 
 # fund :project do |project|
