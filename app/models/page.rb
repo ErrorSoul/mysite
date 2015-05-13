@@ -7,6 +7,7 @@ class Page < ActiveRecord::Base
   has_many :assets, dependent: :destroy, inverse_of: :page
 
   belongs_to :pageable, polymorphic: true
+  has_many :pages, as: :pageable
 
   accepts_nested_attributes_for :assets, allow_destroy: true, reject_if: proc { |attributes| attributes['name'].blank? }
 

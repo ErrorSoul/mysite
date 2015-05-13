@@ -9,6 +9,16 @@ ru:
       success:
         updated: 'Cтраница успешно обновлена'
 
+    period:
+      success:
+        updated: 'Период успешно обновлен'
+        created: 'Период успешно создан'
+
+    piece:
+      success:
+        updated: 'Пай успешно обновлен'
+        created: 'Пaй успешно создан'
+
     password:
       success:
         updated: 'Ваш пароль успешно обновлен'

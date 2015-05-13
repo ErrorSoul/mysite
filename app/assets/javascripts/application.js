@@ -23,6 +23,7 @@
 
 //= require bootstrap-sprockets
 //= require x
+//= require graph_helper
 //= require froala_editor.min
 //= require jquery.validate.min
 //= require jquery.validate.additional-methods.min

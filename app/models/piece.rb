@@ -1,7 +1,19 @@
 class Piece < ActiveRecord::Base
 
+  PERIODS = %i(
+    month_1
+    month_3
+    month_6
+    month_12
+    found
+  ).freeze
+
   belongs_to :fund
   scope :date_order, -> { order('observ_date ASC') }
+
+  def date_month
+    try(:observ_date).to_s
+  end
 
   def before_last
     arr = fund.pieces.date_order

@@ -21,6 +21,11 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/found/:fund_id' => 'graphs#found'
+  get '/month1/:fund_id' => 'graphs#month1'
+  get '/month3/:fund_id' => 'graphs#month3'
+  get '/month6/:fund_id' => 'graphs#month6'
+  get '/month12/:fund_id' => 'graphs#month12'
   NAMES.each do |name|
     get name.to_sym, to: "main_pages##{name}", as: name
   end

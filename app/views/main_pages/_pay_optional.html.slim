@@ -1,13 +1,4 @@
-- piece = @page.fund.pieces.last
-- before_last = piece.before_last
-- three_ago = piece.three_ago
-- six_ago   = piece.six_ago
-- found = @page.fund.pieces.first
-section.simple_text
-  #data-date.p_block.p_vertival data-date=@page.fund.pieces.map(&:date_month)
-    #data-month3.article.container data-month3=@page.fund.pieces.take(3).map(&:date_month)
-      = @page.content.html_safe
-    #data-fund.after_title.col-container data-fund=@page.fund.id
+#data-fund.after_title.col-container data-fund=@page.fund.id
       .col-50.pad-r-60
         h2= "Стоимость пая и чистых активов на #{piece.observ_date.try(:strftime, '%d.%m.%Y')}" 
         table.t1.report.after_title.tc.bln.wsn
@@ -37,10 +28,10 @@ section.simple_text
               th 3 месяца
               th 6 месяцев
               th 1 год
-
+              
               th.table_little
                 | С момента  основания
-
+                
           tbody
             tr
               td = "#{ piece.change(before_last).round(2)}%"
@@ -53,7 +44,7 @@ section.simple_text
         article.container
           .after_title
 
-            nav role="tabpanel"
+            nav role="tabpanel" 
               /! Nav tabs
               ul#myTab.col-container.nav.nav-tabs role="tablist"
                 - periods = @page.fund.periods
@@ -67,3 +58,8 @@ section.simple_text
                 - Piece::PERIODS.each_with_index do |period, index|
                   .tab-pane role="tabpanel" id=period class="#{'active' if index == 0}"
                     .ct-chart.ct-perfect-fourth class=period
+                    
+         
+         
+              
+
