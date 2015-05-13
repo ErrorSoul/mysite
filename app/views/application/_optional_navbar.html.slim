@@ -8,9 +8,13 @@
           li
             = link_to t(page.name), main_page_path(page)
 
+
 - if @page && @page.name == "about"
   nav.yellowbord.col-container
-    a.inner href="comand.html"  Команда
-    a.inner href="opening.html"  Раскрытие информации
-    a.inner href="partners.html"  Партнерам
-    a.inner href="docs.html"  Документы
+    - @page.pages.each do |page|
+      = link_to t(page.name), main_page_path(page), class: "inner #{'active' if @page.name == page.name }"
+
+- if @page &&  @page.main_page && @page.main_page.name == "about"
+  nav.yellowbord.col-container
+    - @page.main_page.pages.each do |page|
+      = link_to t(page.name), main_page_path(page), class: "inner #{'active' if @page.name == page.name }"

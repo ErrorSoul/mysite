@@ -36,6 +36,8 @@ crumb :page do |page|
 
   if page.fund
     parent page.fund
+  elsif page.main_page
+    parent page.main_page
   else
     parent :root
   end

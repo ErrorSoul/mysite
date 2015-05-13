@@ -22,6 +22,8 @@ ru:
   fund_condition: 'Условия инвестирования'
   pages:          'Cтраницы'
   about:          'О компании'
+  command:        'Команда'
+  to_partners:    'Партнерам'
   contact:        'Контакт'
   assets:         'Файлы'
   asset:          'Файл'

@@ -15,4 +15,8 @@ class Page < ActiveRecord::Base
     pageable if pageable.class.to_s == 'Fund'
   end
 
+  def main_page
+    pageable if pageable.class.to_s == 'Page'
+  end
+
 end
