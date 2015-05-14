@@ -42,7 +42,7 @@
 //= require jquery.validate.messages_ru.min
 //= require jquery.inputmask
 //= require jquery.inputmask.phone.extensions
-//= require main
+
 
 //= require owl.carousel.min
-
+//= require main
