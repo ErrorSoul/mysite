@@ -1,0 +1,19 @@
+- breadcrumb :funds_pages, @fund
+
+.row
+  .col-sm-12
+    .col-sm-2
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false, period_flag: false, piece_flag: false }
+
+    .col-sm-10
+
+      .panel.panel-default
+        .panel-heading
+          h4.panel-title = t :funds_pages
+        .panel-body
+          .col-sm-12
+            ul
+              - @fund.pages.each do |page|
+                li
+                  = link_to t(page.name), admin_page_path(page)

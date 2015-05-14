@@ -1,20 +1,20 @@
-- if @fund
+- fund = @fund || @page.fund
+- if fund
   nav.leftbc.col-container
     .inner
       .thispage О фонде
       ul
-        li
-          a href="/main_pages/6"  Раскрытие информации
-        li
-          a href="/main_pages/7"  Документы фонда
-        li
-          a href="#"  Отчетность
-        li
-          a href="#"  Стоимость пая и СЧА, динамика доходности
+        - fund.pages.each do |page|
+          li
+            = link_to t(page.name), main_page_path(page)
+
 
 - if @page && @page.name == "about"
   nav.yellowbord.col-container
-    a.inner href="comand.html"  Команда
-    a.inner href="opening.html"  Раскрытие информации
-    a.inner href="partners.html"  Партнерам
-    a.inner href="docs.html"  Документы
+    - @page.pages.each do |page|
+      = link_to t(page.name), main_page_path(page), class: "inner #{'active' if @page.name == page.name }"
+
+- if @page &&  @page.main_page && @page.main_page.name == "about"
+  nav.yellowbord.col-container
+    - @page.main_page.pages.each do |page|
+      = link_to t(page.name), main_page_path(page), class: "inner #{'active' if @page.name == page.name }"

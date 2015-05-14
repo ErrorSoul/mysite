@@ -13,8 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 
+//= require moment
+//= require moment/ru
 //= require bootstrap
-//= require froala_editor.min
+//= require bootstrap-sprockets
+//= require bootstrap-datetimepicker
+//= require admin/datepicker
+
 //= require langs/ru.js
 //= require helper
 //= require plugins/block_styles.min.js
@@ -37,5 +42,7 @@
 //= require jquery.validate.messages_ru.min
 //= require jquery.inputmask
 //= require jquery.inputmask.phone.extensions
-//= require main
+
+
 //= require owl.carousel.min
+//= require main

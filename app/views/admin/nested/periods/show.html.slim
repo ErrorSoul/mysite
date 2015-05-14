@@ -1,0 +1,39 @@
+- breadcrumb :period, @fund, @period
+
+.row
+  .col-sm-12
+    .col-sm-2
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false, period_flag: true, piece_flag: false }
+    .col-sm-10
+      .form-horizontal
+        .panel.panel-default
+          .panel-heading
+            h4.panel-title = t :period
+          .panel-body
+            .form-group
+              label.col-sm-2.control-label = t :name
+              .col-sm-4
+                p.form-control-static = @period.name
+
+        - Quartal::TYPES.each do |type|
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title = t type
+            .panel-body
+              -  Quartal::NUMS.each do |attr|
+                .form-group
+                  label.col-sm-2.control-label = t "#{attr}_q"
+                  .col-sm-4
+                    p.form-control-static = @period.send(type).send("#{attr}_q").file.try(:original_filename)
+                .form-group
+                  label.col-sm-2.control-label = t "#{attr}_d"
+                  .col-sm-4
+                    p.form-control-static = @period.send(type).send("#{attr}_d")
+          
+       
+        .form-group.form-actions
+          .col-sm-offset-2.col-sm-4
+            = btn_sm_to_edit edit_admin_fund_nested_period_path(@fund, @period), class: 'btn-block'
+            = btn_sm_to_back admin_fund_nested_periods_path(@fund), class: 'btn-block-left'
+            = btn_sm_to_delete admin_fund_nested_period_path(@fund, @period), class: 'btn-block-right'

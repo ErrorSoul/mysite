@@ -1,0 +1,178 @@
+ru:
+  errors:
+    messages:
+      extension_white_list_error: 'Неверный формат файла.'
+      invalid_zipcode: 'Heверный формат индекса'
+
+  activerecord:
+    errors:
+      models:
+        resource: &resource
+          attributes:
+            shared:
+              taken:        &taken 'Уже существует.'
+              blank:        &blank 'Не может быть пустым.'
+              not_a_number: &not_a_number 'Должен иметь цифровой формат.'
+            email:
+              taken:   *taken
+              blank:   *blank
+              invalid: 'Не соответсвует типу.'
+            password:
+              blank:     *blank
+              too_short: 'Пароль должен содержать не меньше 8 символов.'
+            last_name:
+              blank: *blank
+            first_name:
+              blank: *blank
+            middle_name:
+              blank: *blank
+            phone:
+              blank: *blank
+              invalid: 'Неправильный формат номера'
+            region:
+              blank: *blank
+            city:
+              blank: *blank
+            sex:
+              blank: *blank
+            birth_date:
+              blank: *blank
+            birth_place:
+              blank: *blank
+            jur_name_full:
+              blank: *blank
+            jur_name_short:
+              blank: *blank
+            web_site:
+              blank: *blank
+            name:
+              blank: *blank
+
+        meta:
+          <<: *resource
+        user:
+          <<: *resource
+        admin:
+          <<: *resource
+        manager:
+          <<: *resource
+        agent:
+          <<: *resource
+          attributes:
+            agent_category_id:
+              blank: *blank
+            sex:
+              blank: *blank
+            company:
+              blank: *blank
+            position:
+              blank: *blank
+            commission:
+              blank: *blank
+            region:
+              blank: *blank
+            city:
+              blank: *blank
+            banking_detail:
+              blank: *blank
+            products:
+              blank: *blank
+            scan_statute:
+              blank: *blank
+            scan_ogrn:
+              blank: *blank
+            scan_inn:
+              blank: *blank
+            scan_kpp:
+              blank: *blank
+            scan_decision:
+              blank: *blank
+            scan_order:
+              blank: *blank
+            scan_procuration:
+              blank: *blank
+            scan_other:
+              blank: *blank
+            scan_inn_kpp:
+              blank: *blank
+            scan_passport:
+              blank: *blank
+            scan_ogrnip:
+              blank: *blank
+
+        passport:
+          attributes:
+            serie:
+              blank:        *blank
+              not_a_number: *not_a_number
+            number:
+              blank:        *blank
+              not_a_number: *not_a_number
+            issued:
+              blank:        *blank
+            issue_date:
+              blank:        *blank
+            code:
+              blank:        *blank
+              not_a_number: *not_a_number
+
+        address:
+          attributes:
+            registration:
+              blank: *blank
+            juristic:
+              blank: *blank
+            factual:
+              blank: *blank
+            region:
+              blank: *blank
+            city:
+              blank: *blank
+
+        signatory:
+          attributes:
+            position:
+              blank: *blank
+            reason:
+              blank: *blank
+            details:
+              blank: *blank
+
+        banking_detail:
+          attributes:
+            name:
+              blank: *blank
+            bik:
+              blank:        *blank
+              not_a_number: *not_a_number
+            ogrn:
+              blank:        *blank
+              not_a_number: *not_a_number
+            inn:
+              blank:        *blank
+              not_a_number: *not_a_number
+            kpp:
+              blank:        *blank
+              not_a_number: *not_a_number
+            rs:
+              blank:        *blank
+              not_a_number: *not_a_number
+            ks:
+              blank:        *blank
+              not_a_number: *not_a_number
+            ogrnip:
+              blank:        *blank
+              not_a_number: *not_a_number
+        client:
+          attributes:
+            strategy:
+              blank: *blank
+            inn:
+              blank: *blank
+              not_a_number: *not_a_number
+            snils:
+              blank: *blank
+              not_a_number: *not_a_number
+            oms:
+              blank: *blank
+              not_a_number: *not_a_number

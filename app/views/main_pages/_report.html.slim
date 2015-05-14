@@ -1,0 +1,21 @@
+section.simple_text
+  .p_block.p_vertival
+    article.container
+      h1 = t(@page.name)
+    .after_title
+
+      nav.yellbox role="tabpanel" 
+        /! Nav tabs
+        ul#myTab.col-container.nav.nav-tabs role="tablist"
+          - periods = @page.fund.periods
+          - periods.each_with_index do |period, index|
+            
+            li role="presentation" class="#{'active' if index == 0}"
+              a aria-controls=period.name data-toggle="tab" href="##{period.name}" role="tab"
+                = period.name
+          
+        .tab-content
+          - periods.each_with_index do |period, index|
+            .tab-pane role="tabpanel" id=period.name class="#{'active' if index == 0}"
+              = render partial: "admin/shared/report_table", locals: { period: period }
+ 

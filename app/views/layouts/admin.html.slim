@@ -21,9 +21,15 @@ html.no-js
     body
       = render partial: 'shared/navbar'
 
-      .container
+      .container-fluid
         .row
           .col-sm-12
+            .page-header
+              h3
+                == breadcrumbs  separator: " >>> ",
+                                display_single_fragment: true,
+                                autoroot: false
+
             = flash_messages
             = yield
 

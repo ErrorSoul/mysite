@@ -1,20 +1,10 @@
-.form-horizontal
-  .panel.panel-default
-    .panel-heading
-      h4.panel-title = t :pages
-    .panel-body
-      .form-group
-        label.col-sm-2.control-label = t :name
-        .col-sm-4
-          p.form-control-static = t @page.name
-
-      .form-group
-        label.col-sm-2.control-label = t :content
-        .col-sm-12
-          p.form-control-static = @page.content.html_safe
-
-.form-group.form-actions
-  .col-sm-offset-2.col-sm-4
-    = btn_sm_to_edit edit_admin_page_path(@page), class: 'btn-block'
-    = btn_sm_to_back admin_pages_path, class: 'btn-block-left'
-    = btn_sm_to_delete admin_page_path(@page), class: 'btn-block-right'
+- breadcrumb :admin_page, @page
+- if @page.fund
+  .row
+    .col-sm-12
+      .col-sm-2
+        = render partial: "shared/left_menu", locals: { resource: @page.fund, fund_flag: true, period_flag: false, piece_flag: false }
+      .col-sm-10
+        = render partial: "page_partial"
+- else
+  = render partial: "page_partial"

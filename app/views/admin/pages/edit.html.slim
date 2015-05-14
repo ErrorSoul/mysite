@@ -1,8 +1,11 @@
-= bootstrap_form_for @page, url: admin_page_path(@page), html: { multipart: true } do |f|
-  = render partial: 'form', locals: { f: f, resource: @page }
-  - if @page.name.in? Page::ASSETS
-    = render partial: 'assets_form', locals: { f: f, resource: @page, assets: @page.assets }
-  .form-group.form-actions
-    .col-sm-offset-2.col-sm-4
-      = btn_sm_to_save '#', class: 'btn-block'
-      = btn_sm_to_cancel admin_page_url, class: 'btn-block'
+- breadcrumb :admin_page, @page
+
+- if @page.fund
+  .row
+    .col-sm-12
+      .col-sm-2
+        = render partial: "shared/left_menu", locals: { resource: @page.fund, fund_flag: true, period_flag: false, piece_flag: false }
+      .col-sm-10
+        = render partial: "edit"
+- else
+  = render partial: "edit"

@@ -1,0 +1,22 @@
+= f.panel :piece, title: t(:piece) do
+  = f.group :observ_date do
+    = f.label :observ_date, t(:observ_date), class: 'col-sm-2 required'
+    .col-sm-4
+      .input-group.datepicker
+        .input-group-addon.glyphicon.glyphicon-calendar
+        = f.text_field :observ_date,  class: 'datepicker'
+      = f.hint :observ_date
+
+  = f.group :cost do
+    = f.label :cost, t(:cost), class: 'col-sm-2 required'
+    .col-sm-4
+      = f.text_field :cost
+      = f.hint :cost
+
+  = f.group :pure_cost do
+    = f.label :pure_cost, t(:pure_cost), class: 'col-sm-2 required'
+    .col-sm-4
+      = f.text_field :pure_cost
+      = f.hint :pure_cost
+
+

@@ -1,0 +1,20 @@
+- breadcrumb  :periods, @fund
+.actions
+  = btn_sm_to_create  new_admin_fund_nested_period_path(@fund), class: 'create-period'
+.row
+  .col-sm-12
+    .col-sm-2
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false, period_flag: true, piece_flag: false }
+
+    .col-sm-10
+
+      .panel.panel-default
+        .panel-heading
+          h4.panel-title = t :periods
+        .panel-body
+          .col-sm-12
+            ul
+              - @fund.periods.each do |period|
+                li
+                  = link_to t(period.name), admin_fund_nested_period_path(@fund, period)

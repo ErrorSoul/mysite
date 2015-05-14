@@ -881,7 +881,7 @@ section.attention .toright {display: block;height: 115px;border: 1px solid #caca
 .photolist .photolist-text h3 {color: #000000;}
 
 .partners .col-33 {text-align:  center;}
-.partners a {width:231px;height:200px; text-align: center;font-family: 'HelveticaNeue-Thin';font-size: 24px;color: #122437;text-decoration: none;display: inline-block;border: 1px solid #e4e4e4;margin: 25px;vertical-align: middle;padding: 130px 50px 0}
+.partners a {width:332px;height:332px; text-align: center;font-family: 'HelveticaNeue-Thin';font-size: 24px;color: #122437;text-decoration: none;display: inline-block;border: 1px solid #e4e4e4;margin: 25px;vertical-align: middle;padding: 130px 50px 0}
 .partners a:hover {color: #ffffff;}
 .partners a.bank:hover {background: url("/images/ico/1.jpg") center center no-repeat transparent;}
 .partners a.private:hover{background: url("/images/ico/2.jpg") center center no-repeat transparent;}

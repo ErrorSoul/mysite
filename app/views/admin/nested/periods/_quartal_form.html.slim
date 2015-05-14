@@ -1,0 +1,20 @@
+/= af.hidden_field :fund_id unless resource.new_record?
+= af.hidden_field :id unless resource.new_record?
+= af.hidden_field :obj_type, value: obj_type
+
+- Quartal::NUMS.each do |attr|
+  
+  = af.group "#{attr}_q".to_sym do
+    = af.label attr, t(attr.to_s + "_q"), class: 'col-sm-2'
+    .col-sm-4
+      = af.file_field "#{attr}_q".to_sym, class: 'js-country'
+      = af.hint "#{attr}_q".to_sym
+
+  = af.group "#{attr}_d" do
+    = af.label attr, t(attr.to_s + "_d"), class: 'col-sm-2'
+    .col-sm-4
+      .input-group.datepicker
+        .input-group-addon.glyphicon.glyphicon-calendar
+        = af.text_field "#{attr}_d".to_sym,  class: 'datepicker'
+      
+      = af.hint "#{attr}_d".to_sym

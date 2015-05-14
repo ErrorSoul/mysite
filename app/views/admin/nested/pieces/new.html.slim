@@ -1,0 +1,13 @@
+.row
+  .col-sm-12
+    .col-sm-2
+      = render partial: "shared/left_menu",
+               locals: { resource: @fund, fund_flag: false, period_flag: false, piece_flag: true }
+    .col-sm-10
+      = bootstrap_form_for @piece, url: admin_fund_nested_pieces_path(@fund), html: { multipart: true } do |f|
+        = render partial: 'form', locals: { f: f, resource: @piece }
+
+        .form-group.form-actions
+          .col-sm-offset-2.col-sm-4
+            = btn_sm_to_save '#', class: 'btn-block'
+            = btn_sm_to_cancel admin_fund_nested_pieces_path(@fund), class: 'btn-block'

@@ -1,0 +1,11 @@
+.list-group (data-spy="affix" data-offset-top="75")
+
+  = link_to t(resource.name), admin_fund_path(resource), class: "list-group-item #{ active_css(resource) }"
+
+  = link_to t(:funds_pages), admin_fund_nested_pages_path(resource),
+      class: "list-group-item #{ active_pages_helper(resource, fund_flag) }"
+  = link_to t(:periods), admin_fund_nested_periods_path(resource),
+      class: "list-group-item #{ active_periods_helper(resource, period_flag) }"
+  = link_to t(:pieces), admin_fund_nested_pieces_path(resource),
+      class: "list-group-item #{ active_pieces_helper(resource, piece_flag) }"
+  
