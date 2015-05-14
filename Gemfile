@@ -44,9 +44,19 @@ group :development do
   gem 'pry-rails'
   gem 'annotate'
   gem 'mailcatcher'
+
+  # capistrano
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
 end
 
 group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :production do
+  gem 'unicorn'
 end
