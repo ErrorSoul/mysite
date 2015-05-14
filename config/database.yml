@@ -3,7 +3,6 @@ default: &default
   encoding: utf8
   pool:     5
   username: root
-  password:
   host:     localhost
 
 development:
@@ -15,6 +14,7 @@ test:
   <<: *default
   database: afsite_test
 
-prod:
+production:
   <<: *default
+  password: abcD123
   database: afsite_prod
