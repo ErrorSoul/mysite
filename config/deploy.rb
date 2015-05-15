@@ -5,17 +5,17 @@ set :application, "afinance-site"
 set :repo_url, "git@github.com:ErrorSoul/mysite.git"
 set :branch, "AFS-deploy"
 
-set :deploy_to, "/home/deployer/projects/#{fetch(:application)}"
+set :deploy_to, "/home/deployer/apps/#{fetch(:application)}"
 set :deploy_user, "deployer"
 
 set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_ruby, "2.0.0-p594"
+set :rbenv_ruby, "2.2.0"
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 set :keep_releases, 5
 

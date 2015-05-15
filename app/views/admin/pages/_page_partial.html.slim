@@ -12,6 +12,15 @@
         label.col-sm-2.control-label = t :content
         .col-sm-12
           p.form-control-static = @page.content.html_safe
+  - if @page.pages.any?
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title = t :pages
+      .panel-body
+        .col-sm-12
+          - @page.pages.each do |page|
+            p
+              = link_to t(page.name), admin_page_path(page)
 
   .form-group.form-actions
     .col-sm-offset-2.col-sm-4

@@ -23,7 +23,8 @@ namespace :setup do
   task :symlink_config do
     on roles(:app) do
       execute "rm -f /etc/nginx/sites-enabled/default"
-
+      execute "rm -f /etc/nginx/sites-enabled/#{fetch(:application)}"
+      execute "rm -f /etc/init.d/unicorn_#{fetch(:application)}"
       execute "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
       execute "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{fetch(:application)}"
    end

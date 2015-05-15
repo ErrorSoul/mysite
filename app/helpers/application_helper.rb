@@ -34,4 +34,8 @@ module ApplicationHelper
     active_piece_css(resource) || active_flag_css(flag)
   end
 
+  def file_type(name)
+    type = name.split('.').last
+    type == 'xlsx' ? "xls" : type
+  end
 end

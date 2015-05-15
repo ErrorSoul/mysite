@@ -4,117 +4,37 @@ $ ->
       width: 1000,
       height: 600
   }
+  helper = (name) ->
+    if name is "found"
+      ".#{name}"
+    else
+      ".month_#{name.slice(5)}"
   console.log(fund_id, "fund_id")
-  
-  $.ajax({
-    type: "GET",
-    url: "/found/#{fund_id}",
-    data: {},
-    success:(data) ->
-      console.log data
-      if data.no_graph
-        alert "NO GRAPH"
-      else
-        labels = data.labels
-        series = [data.series]
-        d = {
-            labels: labels,
-            series: series
-          }
-          
-        new Chartist.Line('.found', d, options)
-      error:(data) ->
-        console.log('ERROR', data)
-    })
-
-  $.ajax({
-    type: "GET",
-    url: "/month1/#{fund_id}",
-    data: {},
-    success:(data) ->
-      console.log data
-      if data.no_graph
-        alert "NO GRAPH"
-      else
-        labels = data.labels
-        series = [data.series]
-        d = {
-            labels: labels,
-            series: series
-          }
-          
-        new Chartist.Line('.month_1', d, options)
-      error:(data) ->
-        console.log('ERROR', data)
-    })
-
-  $.ajax({
+  make_graph = (period) ->
+    elem = helper(period)
+    $.ajax({
       type: "GET",
-      url: "/month3/#{fund_id}",
+      url: "/#{period}/#{fund_id}",
       data: {},
       success:(data) ->
         console.log data
         if data.no_graph
-          alert "NO GRAPH"
+          $(elem).before('<div class="col-md-8 no-info-graph"><h2>Информация за выбранный период недоступна</h2></div')
         else
           labels = data.labels
-          console.log(labels, "labels")
           series = [data.series]
-          console.log(labels, "labels")
           d = {
-            labels: labels,
-            series: series
-          }
-          console.log("D", d)
-          new Chartist.Line('.month_3', d, options)
-      error:(data) ->
-        console.log('ERROR', data)
+              labels: labels,
+              series: series
+            }
+          new Chartist.Line(elem, d, options)
+        error:(data) ->
+          console.log('ERROR', data)
     })
 
-  $.ajax({
-    type: "GET",
-    url: "/month6/#{fund_id}",
-    data: {},
-    success:(data) ->
-      console.log data
-      if data.no_graph
-        alert "NO GRAPH"
-      else
-        labels = data.labels
-        series = [data.series]
-        d = {
-            labels: labels,
-            series: series
-          }
-          
-        new Chartist.Line('.month_6', d, options)
-      error:(data) ->
-        console.log('ERROR', data)
-    })
-
-  $.ajax({
-    type: "GET",
-    url: "/month12/#{fund_id}",
-    data: {},
-    success:(data) ->
-      console.log data
-      if data.no_graph
-        alert "NO GRAPH"
-      else
-        labels = data.labels
-        series = [data.series]
-        d = {
-            labels: labels,
-            series: series
-          }
-          
-        new Chartist.Line('.month_12', d, options)
-      error:(data) ->
-        console.log('ERROR', data)
-    })
-  
-
-
-    
-    
-  
+  if fund_id
+    make_graph("found")
+    make_graph("month1")
+    make_graph("month3")
+    make_graph("month6")
+    make_graph("month12")

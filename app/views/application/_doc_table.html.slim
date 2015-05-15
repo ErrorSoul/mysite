@@ -3,6 +3,6 @@
     tbody
       - @page.assets.each do |asset|
         tr
-          td.xls
-            = link_to  asset.name, '#'
+          td class=file_type(asset.asset.file.file)
+            = link_to  asset.name, asset.file_url
           td = asset.created_at.strftime("%d.%m.%Y")

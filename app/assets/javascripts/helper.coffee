@@ -49,6 +49,7 @@ $ ->
       quantity   = asset_input.last().data()['num']
       asset_input[0].name = asset_input[0].name.replace(quantity, quantity + 1)
       asset_input.attr('data-num', quantity + 1)
+      name_input.val('')
 
       $(@).before(asset_clone)
       $(@).before(name_clone)

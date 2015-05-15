@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class AttachUploader < CarrierWave::Uploader::Base
+  # кириллические имена файлов
+  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

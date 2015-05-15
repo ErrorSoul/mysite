@@ -10,25 +10,14 @@ table.t1.report.after_title
     - Quartal::TYPES.each do |type|
       - quart = period.send(type)
       tr
-        th= t type 
-        td.xls
-          | 
-          = quart.first_d.strftime("%d.%m.%Y") if quart.first_d
-          br/
-          a href="#"  Скачать *xls
-        td.xls
-          |
-          = quart.second_d.strftime("%d.%m.%Y") if quart.second_d
-          br/
-          a href="#"  Скачать *xls
-        td.xls
-          | 
-          = quart.third_d.strftime("%d.%m.%Y") if quart.third_d
-          br/
-          a href="#"  Скачать *xls
-        td.xls
-          |
-          = quart.fourth_d.strftime("%d.%m.%Y") if quart.fourth_d
-          br/
-          a href="#"  Скачать *xls
-
+        th= t type
+        - %i(first second third fourth).each do |attr|
+          - if quart.send("#{attr}_q").file
+            td.xls
+              |
+              = quart.send("#{attr}_d").strftime("%d.%m.%Y") if quart.send("#{attr}_d")
+              br/
+              = link_to "Скачать *xls", quart.send("#{attr}_q").url
+          - else
+            td
+              p He найдено
