@@ -52,22 +52,4 @@ section.simple_text
                 td = "#{ piece.change(found).round(2) }%"
       - else
         h2= t(:no_info)
-    section.simple_text.b_gray
-      .p_block.p_vertival
-        article.container
-          .after_title
-
-            nav role="tabpanel"
-              /! Nav tabs
-              ul#myTab.col-container.nav.nav-tabs role="tablist"
-                - periods = @page.fund.periods
-                - Piece::PERIODS.each_with_index do |period, index|
-
-                  li role="presentation" class="#{'active' if index == 0}"
-                    a aria-controls=period data-toggle="tab" href="##{period}" role="tab"
-                      = t period
-
-              .tab-content
-                - Piece::PERIODS.each_with_index do |period, index|
-                  .tab-pane role="tabpanel" id=period class="#{'active' if index == 0}"
-                    .ct-chart.ct-perfect-fourth class=period
+  = render partial: "graph_partial"
