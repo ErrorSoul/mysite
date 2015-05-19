@@ -75,12 +75,12 @@ p + p {
 .inlineblock {
     display: inline-block;
     vertical-align: top;
-    zoom: 1 !ie;
-    display: inline !ie;
+    zoom: 1  ;
+    display: inline  ;
 }
 .clearfix {
     *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
-    zoom: 1 !ie;
+    zoom: 1  ;
 }
 .clearfix:before,
 .clearfix:after {
@@ -199,8 +199,8 @@ footer {
 .bottom_nav li {
     display: inline-block;
     vertical-align: top;
-    zoom: 1 !ie;
-    display: inline !ie;
+    zoom: 1  ;
+    display: inline  ;
     margin: 0 40px;
 }
 .bottom_nav a {
@@ -281,8 +281,8 @@ header {
     position: relative;
     padding: 35px 0;
     *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
-    zoom: 1 !ie;
-    font-size: 18px;
+    zoom: 1  ;
+    font-size: 17px;
     line-height: 22px;
     font-family: "HelveticaNeue-Bold";
     color: #122437;
@@ -304,8 +304,8 @@ header:after {
 .logo img {
     display: inline-block;
     vertical-align: top;
-    zoom: 1 !ie;
-    display: inline !ie;
+    zoom: 1  ;
+    display: inline  ;
 }
 .logo span {
     display: block;
@@ -319,7 +319,7 @@ header:after {
 .main_menu ul {
     display: block;
     *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
-    zoom: 1 !ie;
+    zoom: 1  ;
 }
 .main_menu ul:before,
 .main_menu ul:after {
@@ -404,7 +404,7 @@ header:after {
 .form_element {
     display: block;
     *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
-    zoom: 1 !ie;
+    zoom: 1  ;
     margin-top: 24px;
   position: relative;
 }
@@ -474,7 +474,7 @@ input.error {
 .grey_links {
     width: 100%;
     *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
-    zoom: 1 !ie;
+    zoom: 1  ;
 }
 
 .grey_links:before,
@@ -595,11 +595,14 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
     color: #fff;
 }
 .cifers_list {
-    display: block;
+    display: inline-flex;
     *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
-    zoom: 1 !ie;
+    zoom: 1  ;
     color: #fff;
     text-align: center;
+}
+.cifers_center {
+  margin-left: 22%;
 }
 .cifers_list:before,
 .cifers_list:after {
@@ -612,8 +615,8 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
 .cifers_list li {
     display: inline-block;
     vertical-align: top;
-    zoom: 1 !ie;
-    display: inline !ie;
+    zoom: 1  ;
+    display: inline  ;
     margin-left: 57px;
     width: 124px;
     text-align: center;
@@ -624,8 +627,8 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
 .cifers_list .num {
     display: inline-block;
     vertical-align: top;
-    zoom: 1 !ie;
-    display: inline !ie;
+    zoom: 1  ;
+    //display: inline  ;
     width: 106px;
     height: 106px;
     border: 1px solid #ffd800;
@@ -650,8 +653,8 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
 .button {
     display: inline-block;
     vertical-align: top;
-    zoom: 1 !ie;
-    display: inline !ie;
+    zoom: 1  ;
+    //display: inline  ;
     background: #ffd800;
     font-size: 18px;
     color: #000;
@@ -738,6 +741,9 @@ a.docum:hover, div.docum:hover{color: #000000;}
 .docum.pdf:hover {background-image: url('/images/files/pdf_a.png')}
 .docum.xls {background-image: url('/images/files/xls.png')}
 .docum.xls:hover {background-image: url('/images/files/xls_a.png')}
+.pdf {background: url('/images/files/pdf.png') center left no-repeat }
+.pdf:hover {background: url('/images/files/pdf_a.png') center left no-repeat  }
+
 
 table.newslist {width: 100%;}
 table.newslist th {font-size: 18px;width: 180px;color: #b8b8b8;vertical-align: top;text-align: left}
@@ -801,15 +807,15 @@ section.attention .toright {display: block;height: 115px;border: 1px solid #caca
   overflow: hidden;
 }
 .timelines {
-  display: block;
+  display: inline-flex;
   white-space: nowrap;
 }
 .timeline_item {
   display: block;
   display: inline-block;
   vertical-align: top;
-  zoom: 1 !ie;
-  display: inline !ie;
+  zoom: 1  ;
+  display: inline  ;
   width: 33.3%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -936,8 +942,8 @@ section.attention .toright {display: block;height: 115px;border: 1px solid #caca
         float: none;
         display: inline-block;
         vertical-align: top;
-        zoom: 1 !ie;
-        display: inline !ie;
+        zoom: 1  ;
+        display: inline  ;
         margin: 0;
     }
     .main_menu,

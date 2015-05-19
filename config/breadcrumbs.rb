@@ -48,8 +48,10 @@ crumb :admin_page do |page|
 
   if page.fund
     parent :funds_pages, page.fund
+  elsif page.main_page
+    parent :admin_page, page.main_page
   else
-    parent :admin
+    parent :admin_pages
   end
 end
 

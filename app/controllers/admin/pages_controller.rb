@@ -15,6 +15,9 @@ class Admin::PagesController < Admin::BaseController
       if @page.fund
         redirect_to admin_fund_nested_pages_path(@page.fund) and return
       end
+      if @page.main_page
+        redirect_to admin_page_path(@page.main_page) and return
+      end
       redirect_to admin_pages_url
     else
       render :edit
