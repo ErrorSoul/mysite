@@ -38,4 +38,9 @@ module ApplicationHelper
     type = name.split('.').last
     type == 'xlsx' ? "xls" : type
   end
+
+  def active?(ind)
+    ind.zero? ? "active" : ""
+  end
+
 end

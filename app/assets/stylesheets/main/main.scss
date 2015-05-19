@@ -23,3 +23,22 @@ a {
 .no-info-graph {
   margin-top: 40px;
   }
+
+
+.ct-chart .ct-series.ct-series-a .ct-area {fill: white;}
+.ct-chart .ct-series.ct-series-a .ct-line {stroke: #3BC1F1;stroke-width: 3px;}
+.ct-chart .ct-series.ct-series-a .ct-point {stroke: #3BC1F1;}
+.ct-circle {fill: #3BC1F1;stroke-width: 5;stroke: #203135;}
+
+
+.ct-chart.ct-perfect-fourth>svg {
+  background: white;
+  }
+
+.graph-max {
+  max-height: 500px;
+  }
+
+.graph_gray_max {
+  max-height: 700px;
+  }

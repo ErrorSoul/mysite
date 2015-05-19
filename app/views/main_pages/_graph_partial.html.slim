@@ -1,0 +1,29 @@
+section.simple_text
+  .p_block.p_vertival
+    article.container
+      h1= t :dynamic_pay
+      
+nav.tabs_nav.tabs data-target="2" 
+  .p_block
+    ul.container.col-container
+      li.active = t :dynamic_pay_f
+      li = t :dynamic_pure_f
+section.simple_text.b_gray.graph_gray_max
+  .p_block.p_vertival
+    article.container.tabs-container data-id="2"
+      - %i(dynamic_pay_f dynamic_pure_f).each_with_index do |name, index|
+        - add = index.zero? ? "pie" : "pure"
+        .tab class=active?(index)
+          nav.yellbox.tabs data-target=name 
+            ul.col-container
+              - Piece::PERIODS.each_with_index do |period, ind|
+                li class=active?(ind)
+                  = t period
+              
+          .text.after_title.tabs-container data-id=name
+             - Piece::PERIODS.each_with_index do |period, ind|
+               .tab.graph.graph-max class=active?(ind)
+                 
+                 .ct-chart.ct-perfect-fourth class=("#{period}" + "#{add}")
+           
+       

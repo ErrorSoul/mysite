@@ -1,20 +1,29 @@
 $ ->
   fund_id = $('#data-fund').data('fund')
   options = {
-      width: 1000,
-      height: 600
+      width: "1132px",
+      height: "500px"
   }
+
   helper = (name) ->
     if name is "found"
       ".#{name}"
     else
       ".month_#{name.slice(5)}"
+
   console.log(fund_id, "fund_id")
-  make_graph = (period) ->
-    elem = helper(period)
+
+  make_graph = (period, type) ->
+    elem = helper(period) + type
     $.ajax({
       type: "GET",
-      url: "/#{period}/#{fund_id}",
+
+      #
+      # /pie/month1/1 or
+      # /pure/month12/1
+      #
+
+      url: "/#{type}/#{period}/#{fund_id}",
       data: {},
       success:(data) ->
         console.log data
@@ -33,8 +42,15 @@ $ ->
     })
 
   if fund_id
-    make_graph("found")
-    make_graph("month1")
-    make_graph("month3")
-    make_graph("month6")
-    make_graph("month12")
+    t = "pie"
+    make_graph("found",   t)
+    make_graph("month1",  t)
+    make_graph("month3",  t)
+    make_graph("month6",  t)
+    make_graph("month12", t)
+    t = "pure"
+    make_graph("found",   t)
+    make_graph("month1",  t)
+    make_graph("month3",  t)
+    make_graph("month6",  t)
+    make_graph("month12", t)
