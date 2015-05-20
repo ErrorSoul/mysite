@@ -56,7 +56,7 @@ crumb :admin_page do |page|
 end
 
 crumb :funds_pages do |fund|
-  link t(:funds_pages), admin_fund_path(fund)
+  link t(:funds_pages), admin_fund_nested_pages_path(fund)
   parent :admin_fund, fund
 end
 
@@ -78,6 +78,11 @@ end
 crumb :funds_pieces do |fund|
   link t(:pieces), admin_fund_nested_pieces_path(fund)
   parent :admin_fund, fund
+end
+
+crumb :fund_piece do |fund, piece|
+  link t(:piece), "#"
+  parent :funds_pieces, fund
 end
 
 # fund :project do |project|

@@ -1,10 +1,19 @@
 - fund = @fund || @page.fund
 - if fund
   nav.leftbc.col-container
+    - if fund.name == 'nska'
+      .inner.analitycs
+        .thispage
+          = t(:funds_analitycs)
+        ul
+          - fund.pages.slice(-4, 4).each do |page|
+            li
+              = link_to t(page.name), main_page_path(page)
     .inner
       .thispage О фонде
       ul
-        - fund.pages.each do |page|
+        - pages = fund.name == "nska" ? fund.pages.slice(0, 6) : fund.pages
+        - pages.each do |page|
           li
             = link_to t(page.name), main_page_path(page)
 
