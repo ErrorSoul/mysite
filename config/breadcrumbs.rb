@@ -75,6 +75,11 @@ crumb :period do |fund, period|
   parent :periods, fund
 end
 
+crumb :funds_pieces do |fund|
+  link t(:pieces), admin_fund_nested_pieces_path(fund)
+  parent :admin_fund, fund
+end
+
 # fund :project do |project|
 #   link project.name, project_path(project)
 #   parent :projects

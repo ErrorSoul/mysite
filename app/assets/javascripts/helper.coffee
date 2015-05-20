@@ -5,6 +5,8 @@ $ ->
   $('[data-toggle="popover"]').popover()
   $('[data-toggle="tooltip"]').tooltip()
 
+  $('.dropdown-toggle').dropdown()
+
   #
   # Submit form via js
   #
