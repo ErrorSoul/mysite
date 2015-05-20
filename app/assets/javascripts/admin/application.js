@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-
-//= require moment
-//= require moment/ru
 //= require bootstrap
 //= require bootstrap-sprockets
+//= require moment
+//= require moment/ru
+
 //= require bootstrap-datetimepicker
 //= require admin/datepicker
 

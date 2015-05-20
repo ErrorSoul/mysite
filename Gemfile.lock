@@ -182,6 +182,10 @@ GEM
     ref (1.0.5)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rubyXL (3.3.8)
+      nokogiri (>= 1.4.4)
+      rubyzip (>= 1.1.6)
+    rubyzip (1.1.6)
     sass (3.4.13)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -269,6 +273,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 4.2)
+  rubyXL
   sass-rails (~> 5.0)
   slim
   spring

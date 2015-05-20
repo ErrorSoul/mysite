@@ -1,8 +1,8 @@
 class Admin::Nested::PiecesController < Admin::BaseController
-  before_action :set_fund, only: [:new, :show, :create, :edit, :update]
+  before_action :set_fund, only: [:index, :new, :show, :create, :edit, :update, :destroy]
 
   def index
-    @fund = Fund.includes(:pieces).find params[:fund_id]
+   @pieces = Piece.order('observ_date DESC').where(fund_id: @fund.id)
   end
 
   def new
@@ -35,6 +35,17 @@ class Admin::Nested::PiecesController < Admin::BaseController
 
   def edit
     @piece = @fund.pieces.find params[:id]
+  end
+
+  def destroy
+    @piece = @fund.pieces.find params[:id]
+    if @piece.destroy
+      flash[:success] = t 'flash.piece.success.deleted'
+    else
+      flash[:error]   = t 'flash.piece.fail.deleted'
+    end
+
+    redirect_to admin_fund_nested_pieces_path(@fund)
   end
 
   private

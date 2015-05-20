@@ -9,6 +9,8 @@ gem 'mysql2'
 # Auth
 gem 'devise'
 
+gem 'rubyXL'
+
 # Javascripts
 gem 'therubyracer'
 gem 'coffee-rails', '~> 4.1.0'

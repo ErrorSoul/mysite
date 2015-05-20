@@ -18,6 +18,9 @@ ru:
       success:
         updated: 'Пай успешно обновлен'
         created: 'Пaй успешно создан'
+        deleted: 'Пaй успешно удален'
+      fail:
+        deleted: 'Что-то пошло не так. Попробуйте позже'
 
     password:
       success:
