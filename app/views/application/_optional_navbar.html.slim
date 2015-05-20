@@ -1,4 +1,4 @@
-- fund = @fund || @page.fund
+- fund = @fund || (@page.fund if @page)
 - if fund
   nav.leftbc.col-container
     - if fund.name == 'nska'

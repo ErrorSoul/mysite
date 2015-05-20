@@ -25,3 +25,7 @@ ru:
     password:
       success:
         updated: 'Ваш пароль успешно обновлен'
+
+    page_partner:
+      success:
+        updated: 'Вашa страница успешно обновлена'

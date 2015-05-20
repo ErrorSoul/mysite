@@ -1,5 +1,13 @@
 = render partial: "breadcrumb"
-= @page.content.html_safe
+script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=AcGsOQ95PqR9INdSSjEDxfJrGHrxpT1k&id=mymap"
+section.white_chamber.rel.funds
+  #mymap.outta_image style="width: 100%; height: 600px"
+    
+  .p_block
+    .container
+      .common
+section.push_down
+  = @page.content.html_safe
 section.common.bdt
   .p_block
     .container

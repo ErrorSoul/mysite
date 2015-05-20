@@ -978,3 +978,6 @@ section.attention .toright {display: block;height: 185px;border: 1px solid #caca
     }
 }
 
+.funds {
+    margin-bottom: 120px;
+}

@@ -3,7 +3,7 @@ crumb :root do
 end
 
 crumb :funds do
-  link t(:funds), funds_path
+  link t(:funds_), funds_path
   parent :root
 end
 
@@ -83,6 +83,26 @@ end
 crumb :fund_piece do |fund, piece|
   link t(:piece), "#"
   parent :funds_pieces, fund
+end
+
+crumb :admin_partners do
+  link t(:to_partners), admin_partners_path
+  parent :admin
+end
+
+crumb :admin_partner do |partner|
+  link t(partner.name), admin_partner_path(partner)
+  parent :admin_partners
+end
+
+crumb :partners do
+  link t(:to_partners), main_page_path(33)
+  parent :root
+end
+
+crumb :partner do |partner|
+  link t(partner.name), partner_path(partner)
+  parent :partners
 end
 
 # fund :project do |project|
