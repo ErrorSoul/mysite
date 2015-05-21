@@ -39,6 +39,8 @@ gem 'gretel'
 
 # Editor
 gem "wysiwyg-rails"
+gem "mini_magick"
+gem "redactor-rails"
 
 group :development do
   gem 'puma'

@@ -15,4 +15,6 @@
  *= require 'shared/application'
  *= require froala_editor.min.css
  *= require froala_style.min.css
+ *= require redactor-rails
+ *= require redactor-rails/plugins
  */

@@ -26,4 +26,3 @@
 
 //= require graph_helper
 //= require main
-

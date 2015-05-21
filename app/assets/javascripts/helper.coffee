@@ -25,8 +25,8 @@ $ ->
   #
   #
 
-  $ ->
-    $('.js-editor').editable inlineMode: false
+  #$ ->
+  #  $('.js-editor').editable inlineMode: false
 
   add_many_scans = ->
     $add_scans = $('.add_scans')
