@@ -2,7 +2,15 @@ $ ->
   fund_id = $('#data-fund').data('fund')
   options = {
       width: "1132px",
-      height: "500px"
+      height: "500px",
+      offset: 20,
+
+      lineSmooth: Chartist.Interpolation.simple({
+        divisor: 3
+      }),
+      axisY: {
+        offset: 100,
+      }
   }
 
   helper = (name) ->
@@ -48,6 +56,7 @@ $ ->
     make_graph("month3",  t)
     make_graph("month6",  t)
     make_graph("month12", t)
+
     t = "pure"
     make_graph("found",   t)
     make_graph("month1",  t)

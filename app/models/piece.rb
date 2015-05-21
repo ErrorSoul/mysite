@@ -12,7 +12,7 @@ class Piece < ActiveRecord::Base
   scope :date_order, -> { order('observ_date ASC') }
 
   def date_month
-    try(:observ_date).to_s
+    try(:observ_date).strftime("%m.%Y")
   end
 
   def before_last
