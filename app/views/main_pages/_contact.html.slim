@@ -18,16 +18,4 @@ section.common.bdt
           br/
           | мы ответим вам в ближайшее время
       .after_title
-        form.tac action="" novalidate="novalidate" 
-          .form_element
-            .attr
-              input name="name" placeholder=("Как вас зовут?") type="text" /
-          .form_element
-            .attr
-              input name="phone" placeholder=("Ваш телефон") type="text" /
-          .form_element
-            .attr
-              textarea name="msg" placeholder=("Ваше сообщение") 
-          .form_element.submit
-            .attr
-              button.button type="submit"  Отправить
+        = render partial: 'feedback_form', locals: { obj_type: "message" }

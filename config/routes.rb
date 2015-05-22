@@ -47,4 +47,5 @@ Rails.application.routes.draw do
   resources :partners, only: [:show]
   resources :smis, only: [:index, :show]
   resources :releases, only: [:index, :show]
+  resources :reports
 end

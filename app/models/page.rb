@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  PARTIALS = %w(main about contact open_info docs report pay).freeze
+  PARTIALS = %w(main about contact open_info docs report pay to_partners).freeze
 
   ASSETS   = %w(open_info docs)
 

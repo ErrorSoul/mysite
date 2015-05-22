@@ -46,3 +46,17 @@ a {
   margin-top: 60px;
   margin-left: 20px;
   }
+
+input[type="text"].has-error {
+  border-color: red;
+  
+  }
+
+.has-error {
+  border-color: red;
+  
+  }
+.center-text {
+  text-align: center;
+  color: green;
+  }
