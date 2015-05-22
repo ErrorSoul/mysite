@@ -1,0 +1,10 @@
+section.simple_text
+  .p_block.p_vertival
+    article.container
+      h1 = t(crumb)
+      .text.after_title
+        .review-date = post.created_at.try(:strftime, "%d.%M.%Y")
+        h2.review-title = post.title
+        .review-text.after_title
+          p = post.body.html_safe
+          = link_to t(:to_news), press_path_helper(post), class: "backlink after_title"

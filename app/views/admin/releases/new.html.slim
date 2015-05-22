@@ -1,0 +1,10 @@
+- breadcrumb :admin_releases
+
+= bootstrap_form_for @release, url: admin_releases_path, html: { multipart: true } do |f|
+  = render partial: 'admin/shared/post_form', locals: { f: f, resource: @release }
+
+  .form-group.form-actions
+    .col-sm-offset-2.col-sm-4
+      = btn_sm_to_save '#', class: 'btn-block'
+      = btn_sm_to_cancel admin_releases_path, class: 'btn-block'
+

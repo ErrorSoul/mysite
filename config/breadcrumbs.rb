@@ -105,6 +105,41 @@ crumb :partner do |partner|
   parent :partners
 end
 
+crumb :press_centr do
+  link t(:press_centr), releases_path
+  parent :root
+end
+
+crumb :releases do
+  link t(:releases), releases_path
+  parent :press_centr
+end
+
+crumb :admin_releases do
+  link t(:releases), admin_releases_path
+  parent :admin
+end
+
+crumb :admin_release do |release|
+  link release.title.mb_chars.truncate(15), admin_release_path(release)
+  parent :admin_releases
+end
+
+crumb :smis do
+  link t(:smi), smis_path
+  parent :press_centr
+end
+
+crumb :admin_smis do
+  link t(:smi), admin_smis_path
+  parent :admin
+end
+
+crumb :admin_smi do |smi|
+  link smi.title.mb_chars.truncate(15), admin_smi_path(smi)
+  parent :admin_smis
+end
+
 # fund :project do |project|
 #   link project.name, project_path(project)
 #   parent :projects

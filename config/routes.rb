@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resource  :dashboard, only: :show
     resources :pages
     resources :partners
+    resources :releases
+    resources :smis
     resources :funds do
       namespace :nested do
         resources :pages, only: :index
@@ -44,4 +46,6 @@ Rails.application.routes.draw do
   resources :main_pages, only: :show
   resources :funds, only: [:index, :show]
   resources :partners, only: [:show]
+  resources :smis, only: [:index, :show]
+  resources :releases, only: [:index, :show]
 end

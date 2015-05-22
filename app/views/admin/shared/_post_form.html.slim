@@ -1,0 +1,16 @@
+= f.panel :relaeses, title: t(:releases) do
+  = f.hidden_field :object_type, value: resource.object_type
+
+  = f.group :title do
+    = f.label :title, t(:title), class: 'col-sm-2 required'
+    .col-sm-12
+      = f.text_field :title,  class: 'form-control'
+      = f.hint :title
+
+  = f.group :body do
+    = f.label :body, t(:body), class: 'col-sm-2 required'
+    .col-sm-12
+      = f.text_area :body, rows: 10, class: 'redactora form-control'
+      = f.hint :body
+
+  

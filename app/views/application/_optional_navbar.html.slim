@@ -27,3 +27,9 @@
   nav.yellowbord.col-container
     - @page.main_page.pages.each do |page|
       = link_to t(page.name), main_page_path(page), class: "inner #{'active' if @page.name == page.name }"
+
+- post = @release || @releases || @smi || @smis
+- if post
+  nav.yellowbord.col-container
+    = link_to t(:press_centr), releases_path, class: "inner #{ releases_helper(post) }"
+    = link_to t(:smi), smis_path, class: "inner #{ smis_helper(post) }"

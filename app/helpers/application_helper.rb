@@ -43,4 +43,24 @@ module ApplicationHelper
     ind.zero? ? "active" : ""
   end
 
+  def releases_helper(resource)
+    if current_page?(releases_path) || current_page?(release_path(resource))
+      "active"
+    end
+  end
+
+  def smis_helper(resource)
+    if current_page?(smis_path) || current_page?(smi_path(resource))
+      "active"
+    end
+  end
+
+  def press_path_helper(post)
+    if post.object_type == "release"
+      releases_path
+    else
+      smis_path
+    end
+  end
+
 end
