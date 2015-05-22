@@ -8,19 +8,19 @@
   = f.group :content do
     = f.label :content, t(:content), class: 'col-sm-2 required'
     .col-sm-12
-      = f.text_area :content, rows: 5, class: 'redactora form-control'
+      = f.text_area :content, rows: 5, class: 'js-editor form-control'
       = f.hint :content
 
   = f.panel :fund_info, title: t(:fund_info) do
     = f.group :info do
       = f.label :info, t(:fund_info), class: 'col-sm-2 required'
       .col-sm-12
-        = f.text_area :info, rows: 5, class: 'redactora form-control'
+        = f.text_area :info, rows: 5, class: 'js-editor form-control'
         = f.hint :info
 
   = f.panel :fund_condition, title: t(:fund_condition) do
     = f.group :condition do
       = f.label :condition, t(:fund_condition), class: 'col-sm-2 required'
       .col-sm-12
-        = f.text_area :condition, rows: 5, class: 'redactora form-control'
+        = f.text_area :condition, rows: 5, class: 'js-editor form-control'
         = f.hint :condition

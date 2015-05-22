@@ -1,0 +1,10 @@
+- breadcrumb :admin_partner, @page_partner
+.row
+  .col-sm-12
+    = bootstrap_form_for @page_partner, url: admin_partner_path(@page_partner), html: { multipart: true } do |f|
+      = render partial: 'form', locals: { f: f, resource: @page_partner }
+  
+      .form-group.form-actions
+        .col-sm-offset-2.col-sm-4
+          = btn_sm_to_save '#', class: 'btn-block'
+          = btn_sm_to_cancel admin_partners_url, class: 'btn-block'

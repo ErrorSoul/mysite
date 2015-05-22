@@ -1,0 +1,24 @@
+- breadcrumb :admin_partner, @page_partner
+
+
+.form-horizontal
+  .panel.panel-default.fund-overflow-x
+    .panel-heading
+      h4.panel-title = t :to_partners
+    .panel-body
+      .form-group
+        label.col-sm-2.control-label = t :name
+        .col-sm-4
+          p.form-control-static = t @page_partner.name
+
+      .form-group
+        label.col-sm-2.control-label = t :content
+        .col-sm-12
+          p.form-control-static = @page_partner.content.html_safe
+ 
+
+  .form-group.form-actions
+    .col-sm-offset-2.col-sm-4
+      = btn_sm_to_edit edit_admin_partner_path(@page_partner), class: 'btn-block'
+      = btn_sm_to_back admin_partners_path, class: 'btn-block-left'
+      = btn_sm_to_delete admin_partners_path(@page_partner), class: 'btn-block-right'
