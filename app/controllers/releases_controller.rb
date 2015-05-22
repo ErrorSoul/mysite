@@ -1,5 +1,4 @@
 class ReleasesController < ApplicationController
-
   def index
     @releases = Post.releases.reverse_order
   end
@@ -7,5 +6,4 @@ class ReleasesController < ApplicationController
   def show
     @release = Post.find params[:id]
   end
-
 end

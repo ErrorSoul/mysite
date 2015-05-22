@@ -4,7 +4,6 @@ module Shared
   module Bootstrap
     module Forms
       module HorizontalFormHelper
-
         def horizontal_form_for(resource, options = {}, &block)
           form_for resource, form_options(options), &block
         end
@@ -25,9 +24,8 @@ module Shared
           options[:html] ||= {}
 
           options[:html][:class] = %w(form-horizontal) | \
-            options[:html].try(:[], :class).try(:split).to_a
+                                   options[:html].try(:[], :class).try(:split).to_a
         end
-
       end
     end
   end

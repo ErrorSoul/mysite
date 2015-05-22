@@ -1,7 +1,6 @@
 module Shared
   module Bootstrap
     module WrapperHelper
-
       def btn_group(*args, &block)
         options = {
           type:  'default',
@@ -34,7 +33,6 @@ module Shared
       def prepend_class(_class, options)
         options[:class] = _class | options[:class].try(:split).to_a
       end
-
     end
   end
 end

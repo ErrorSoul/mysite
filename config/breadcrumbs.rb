@@ -16,7 +16,7 @@ crumb :admin do
   link t(:main), admin_dashboard_path
 end
 
-crumb :admin_funds do 
+crumb :admin_funds do
   link t(:funds), admin_funds_path
   parent :admin
 end
@@ -66,7 +66,7 @@ crumb :periods do  |fund|
 end
 
 crumb :period_new do |fund|
-  link t(:period_new), "#"
+  link t(:period_new), '#'
   parent :periods, fund
 end
 
@@ -80,8 +80,8 @@ crumb :funds_pieces do |fund|
   parent :admin_fund, fund
 end
 
-crumb :fund_piece do |fund, piece|
-  link t(:piece), "#"
+crumb :fund_piece do |fund, _piece|
+  link t(:piece), '#'
   parent :funds_pieces, fund
 end
 

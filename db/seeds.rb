@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Admin.create!(
-  email: "afinance.dev+admin@gmail.com",
-  password: "Adminadmin1"
+  email: 'afinance.dev+admin@gmail.com',
+  password: 'Adminadmin1'
   )
 
 %w(
@@ -20,5 +20,5 @@ Admin.create!(
   strategic
   isu_ai
 ).each do |name|
-  Fund.create!(name: name, content: "")
+  Fund.create!(name: name, content: '')
 end

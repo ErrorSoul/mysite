@@ -1,5 +1,4 @@
 class SmisController < ApplicationController
-
   def index
     @smis = Post.smis.reverse_order
   end
@@ -7,5 +6,4 @@ class SmisController < ApplicationController
   def show
     @smi = Post.find params[:id]
   end
-
 end

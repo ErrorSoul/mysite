@@ -2,7 +2,7 @@ class Admin::Nested::PiecesController < Admin::BaseController
   before_action :set_fund, only: [:index, :new, :show, :create, :edit, :update, :destroy]
 
   def index
-   @pieces = Piece.order('observ_date DESC').where(fund_id: @fund.id)
+    @pieces = Piece.order('observ_date DESC').where(fund_id: @fund.id)
   end
 
   def new
@@ -23,7 +23,7 @@ class Admin::Nested::PiecesController < Admin::BaseController
     end
   end
 
-  def update 
+  def update
     @piece = @fund.pieces.find params[:id]
     if @piece.update_attributes piece_params
       redirect_to admin_fund_nested_pieces_path(@fund)
@@ -57,5 +57,4 @@ class Admin::Nested::PiecesController < Admin::BaseController
   def piece_params
     params[:piece].permit!
   end
-
 end

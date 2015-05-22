@@ -3,7 +3,6 @@ require 'form_builders/horizontal_form/form_inputs'
 require 'form_builders/horizontal_form/form_wrappers'
 
 class HorizontalFormBuilder < ActionView::Helpers::FormBuilder
-
   delegate :content_tag, to: :@template
 
   include FormBuilders::HorizontalForm::FormHelpers
@@ -32,11 +31,10 @@ class HorizontalFormBuilder < ActionView::Helpers::FormBuilder
       next unless @object.respond_to? method
 
       has_error = if @object.send(method).respond_to? :errors
-        @object.send(method).errors.any?
+                    @object.send(method).errors.any?
       end
 
       has_error || @object.errors.keys.include?(method)
     end.compact.uniq.any?
   end
-
 end

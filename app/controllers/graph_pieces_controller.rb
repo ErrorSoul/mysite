@@ -8,8 +8,8 @@ class GraphPiecesController < ApplicationController
       @labels = pieces.map(&:date_month)
       @series = pieces.map(&:pure_cost).map(&:to_i)
       if @fund.pieces.length > 12
-        proc_number = Proc.new do |elem, ind|
-          elem if ind % 2 == 0
+        proc_number = proc do |elem, ind|
+          elem if ind.even?
         end
         @labels =
           [@labels.first] + @labels[1, @labels.size - 2].select.with_index(&proc_number) + [@labels.last]
@@ -75,5 +75,4 @@ class GraphPiecesController < ApplicationController
   def set_fund
     @fund = Fund.includes(:pieces).find params[:fund_id]
   end
-
 end

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   mount RedactorRails::Engine => '/redactor_rails'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,7 +10,7 @@ Rails.application.routes.draw do
   }
 
   namespace :admin do
-    resource  :dashboard, only: :show
+    resource :dashboard, only: :show
     resources :pages
     resources :partners
     resources :releases
@@ -32,7 +31,7 @@ Rails.application.routes.draw do
   get 'pie/month6/:fund_id' => 'graphs#month6'
   get 'pie/month12/:fund_id' => 'graphs#month12'
 
-  #pure
+  # pure
   get 'pure/found/:fund_id' => 'graph_pieces#found'
   get 'pure/month1/:fund_id' => 'graph_pieces#month1'
   get 'pure/month3/:fund_id' => 'graph_pieces#month3'

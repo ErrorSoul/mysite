@@ -24,12 +24,12 @@ module Afsite
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    #config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    # config.assets.paths << Rails.root.join("app", "assets", "fonts")
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
     # Disable <div class='field_with_errors'>...</div> content.
-    config.action_view.field_error_proc = Proc.new { |tag, resource| tag.html_safe }
+    config.action_view.field_error_proc = proc { |tag, _resource| tag.html_safe }
     config.autoload_paths << "#{Rails.root}/app/services"
   end
 end

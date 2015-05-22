@@ -1,4 +1,4 @@
-root = "/home/deployer/apps/afinance-site/current"
+root = '/home/deployer/apps/afinance-site/current'
 
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"

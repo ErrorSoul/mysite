@@ -1,15 +1,14 @@
 namespace :deploy do
-
-  desc "Makes sure local git is in sync with remote."
+  desc 'Makes sure local git is in sync with remote.'
   task :check_revision do
     unless `git rev-parse HEAD` == `git rev-parse klone/AFS-deploy`
-      puts "WARNING: HEAD is not the same as origin/AFS-deploy"
-      puts "Run `git push` to sync changes."
+      puts 'WARNING: HEAD is not the same as origin/AFS-deploy'
+      puts 'Run `git push` to sync changes.'
       exit
     end
   end
 
-  %w[start stop restart].each do |command|
+  %w(start stop restart).each do |command|
     desc "#{command} Unicorn server."
     task command do
       on roles(:app) do
@@ -18,8 +17,7 @@ namespace :deploy do
     end
   end
 
-  before :deploy, "deploy:check_revision"
-  after :deploy, "deploy:restart"
-  after :rollback, "deploy:restart"
-
+  before :deploy, 'deploy:check_revision'
+  after :deploy, 'deploy:restart'
+  after :rollback, 'deploy:restart'
 end
