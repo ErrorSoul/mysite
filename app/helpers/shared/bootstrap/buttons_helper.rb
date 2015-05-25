@@ -1,7 +1,6 @@
 module Shared
   module Bootstrap
     module ButtonsHelper
-
       BTNS = [
         { action: 'back',     icon: 'arrow_left', class: 'btn-default' },
         { action: 'cancel',   icon: 'arrow_left', class: 'btn-default' },
@@ -13,10 +12,10 @@ module Shared
         { action: 'send',     icon: 'send',       class: 'btn-default' },
         { action: 'delete',   icon: 'trash',      class: 'btn-danger'  },
         { action: 'continue', icon: 'ok',         class: 'btn-success' },
-        { action: 'period',   icon: 'send',       class: 'btn-success js-submit'},
-        { action: 'save',     icon: 'ok',         class: 'btn-success js-submit'},
-        { action: 'write',    icon: 'ok',         class: 'btn-primary js-submit'},
-        { action: 'find',     icon: 'search',     class: 'btn-primary js-submit'},
+        { action: 'period',   icon: 'send',       class: 'btn-success js-submit' },
+        { action: 'save',     icon: 'ok',         class: 'btn-success js-submit' },
+        { action: 'write',    icon: 'ok',         class: 'btn-primary js-submit' },
+        { action: 'find',     icon: 'search',     class: 'btn-primary js-submit' },
         { action: 'review',   icon: 'search',     class: 'btn-primary' },
 
         #
@@ -106,7 +105,6 @@ module Shared
 
         button_tag args[:content] || t(:reference), options
       end
-
     end
   end
 end

@@ -20,21 +20,7 @@
 //= require bootstrap-datetimepicker
 //= require admin/datepicker
 
-
-
-
-
-//= require jquery.validate.min
-//= require jquery.validate.additional-methods.min
-//= require jquery.validate.messages_ru.min
-//= require jquery.inputmask
-//= require jquery.inputmask.phone.extensions
-
 //= require froala_editor.min
-//= require owl.carousel.min
-//= require jquery.mCustomScrollbar.concat.min
-//= require main
-//= require helper
 //= require plugins/block_styles.min.js
 //= require plugins/colors.min.js
 //= require plugins/media_manager.min.js
@@ -48,4 +34,24 @@
 //= require plugins/fullscreen.min.js
 //= require plugins/urls.min.js
 //= require plugins/inline_styles.min.js
+
+
+
+
+//= require jquery.validate.min
+//= require jquery.validate.additional-methods.min
+//= require jquery.validate.messages_ru.min
+//= require jquery.inputmask
+//= require jquery.inputmask.phone.extensions
+
+
+//= require owl.carousel.min
+//= require jquery.mCustomScrollbar.concat.min
+//= require main
+//= require helper
 //= require plugins
+//= require redactor-rails
+
+
+//= require redactor-rails/plugins
+//= require redactor-rails/config

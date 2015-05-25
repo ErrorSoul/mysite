@@ -1,0 +1,28 @@
+- breadcrumb :admin_partners
+
+    /.actions
+      = btn_sm_to_create new_admin_fund_path
+
+table.table.table-striped
+  thead
+    tr
+      
+      th = t :name
+      th
+
+  tbody
+    - unless @page_partners.any?
+      tr
+        td colspan='6' = t :not_found
+
+    - @page_partners.each do |page_partner|
+      tr
+        
+        td = link_to t(page_partner.name), admin_partner_path(page_partner)
+
+        td.actions
+          = btn_group do
+            li = btn_to_review admin_partner_path(page_partner)
+            li = btn_to_edit   edit_admin_partner_path(page_partner)
+            li.divider
+            li = btn_to_delete admin_partner_path(page_partner)

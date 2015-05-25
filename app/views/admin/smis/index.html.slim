@@ -1,0 +1,37 @@
+- breadcrumb :admin_smis
+
+.actions
+  = btn_sm_to_create  new_admin_smi_path, class: 'create-period'
+.row
+  .col-sm-12
+    
+
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title = t :smi
+      .panel-body
+        .col-sm-12
+          table.table.table-striped
+            thead
+              tr
+                th = t :title
+                th = t :date
+                th
+
+              tbody
+                - unless @smis.any?
+                  tr
+                    td colspan='6' = t :not_found
+
+                - @smis.each do |smi|
+                  tr
+                    td = link_to smi.title, admin_smi_path(smi)
+                    td = link_to smi.created_at.try(:strftime, "%d.%m.%Y"), admin_smi_path(smi)
+                    
+                    td.actions
+                      = btn_group do
+                        li = btn_to_review admin_smi_path(smi)
+                        li = btn_to_edit edit_admin_smi_path(smi)
+                        li.divider
+                        li = btn_to_delete admin_smi_path(smi)
+

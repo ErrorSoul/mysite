@@ -1,7 +1,6 @@
 module Shared
   module Bootstrap
     module FlashMessageHelper
-
       FLASH_TYPES = {
         success: 'alert-success',
         error:   'alert-danger',
@@ -43,7 +42,6 @@ module Shared
           end
         end)
       end
-
     end
   end
 end

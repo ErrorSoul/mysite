@@ -38,7 +38,9 @@ gem 'carrierwave', '0.8.0'
 gem 'gretel'
 
 # Editor
-gem "wysiwyg-rails"
+gem 'wysiwyg-rails'
+gem 'mini_magick'
+gem 'redactor-rails'
 
 group :development do
   gem 'puma'

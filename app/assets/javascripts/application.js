@@ -17,7 +17,7 @@
 
 //= require jquery.mCustomScrollbar.concat.min
 //= require owl.carousel.min
-//= require vendor/jquery.fancybox.pack
+
 
 //= require bootstrap
 
@@ -26,4 +26,4 @@
 
 //= require graph_helper
 //= require main
-
+//= require report

@@ -14,6 +14,14 @@ ru:
         updated: 'Период успешно обновлен'
         created: 'Период успешно создан'
 
+    post:
+      success:
+        updated: 'Пост успешно обновлен'
+        created: 'Пост успешно создан'
+        deleted: 'Пост успешно удален'
+      fail:
+        deleted: 'Что-то пошло не так. Попробуйте позже'
+
     piece:
       success:
         updated: 'Пай успешно обновлен'
@@ -25,3 +33,7 @@ ru:
     password:
       success:
         updated: 'Ваш пароль успешно обновлен'
+
+    page_partner:
+      success:
+        updated: 'Вашa страница успешно обновлена'

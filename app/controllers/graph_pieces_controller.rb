@@ -7,12 +7,20 @@ class GraphPiecesController < ApplicationController
     if @fund.pieces.length > 1
       @labels = pieces.map(&:date_month)
       @series = pieces.map(&:pure_cost).map(&:to_i)
+      if @fund.pieces.length > 12
+        proc_number = proc do |elem, ind|
+          elem if ind.even?
+        end
+        @labels =
+          [@labels.first] + @labels[1, @labels.size - 2].select.with_index(&proc_number) + [@labels.last]
+        @series =
+          [@series.first] + @series[1, @series.size - 2].select.with_index(&proc_number) + [@series.last]
+      end
       render json: { labels: @labels, series: @series }
     else
       render json: { no_graph: true }
     end
   end
-  
 
   def month1
     pieces = @fund.pieces
@@ -67,5 +75,4 @@ class GraphPiecesController < ApplicationController
   def set_fund
     @fund = Fund.includes(:pieces).find params[:fund_id]
   end
-
 end

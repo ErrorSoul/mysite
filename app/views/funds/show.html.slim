@@ -8,13 +8,13 @@ nav.tabs_nav.tabs data-target="1"
   .p_block
     ul.container.col-container
       li.active Сводная информация
-      li Стратегия управления
+      //li Стратегия управления
       li Условия инвестирования
 section.simple_text.b_gray.tabs_container.tabs-container data-id="1"
   article.p_block.p_vertival.container.text.tab.active
     = @fund.info.html_safe
 
-  = @fund.strategy.html_safe
+  //= @fund.strategy.html_safe
 
-  article.container.text.tab
+  article.container.p_block.p_vertival.text.tab
     = @fund.condition.html_safe

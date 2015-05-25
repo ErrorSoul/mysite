@@ -56,6 +56,17 @@ ru:
           <<: *resource
         manager:
           <<: *resource
+        report:
+          
+          attributes:
+            name:
+              blank: *blank
+            body:
+              blank: *blank
+            phone:
+              blank: *blank
+            firm:
+              blank: *blank
         agent:
           <<: *resource
           attributes:

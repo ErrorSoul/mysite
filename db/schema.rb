@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520031402) do
+ActiveRecord::Schema.define(version: 20150522051503) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -61,6 +61,13 @@ ActiveRecord::Schema.define(version: 20150520031402) do
 
   add_index "pages", ["pageable_type", "pageable_id"], name: "index_pages_on_pageable_type_and_pageable_id", using: :btree
 
+  create_table "partner_pages", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "periods", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "fund_id",    limit: 4
@@ -77,6 +84,14 @@ ActiveRecord::Schema.define(version: 20150520031402) do
     t.integer  "fund_id",     limit: 4
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string   "object_type", limit: 255
+    t.string   "title",       limit: 255
+    t.text     "body",        limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "quartals", force: :cascade do |t|
     t.string   "first_q",    limit: 255
     t.string   "second_q",   limit: 255
@@ -90,6 +105,32 @@ ActiveRecord::Schema.define(version: 20150520031402) do
     t.date     "second_d"
     t.date     "third_d"
     t.date     "fourth_d"
+  end
+
+  create_table "redactor_assets", force: :cascade do |t|
+    t.string   "data_file_name",    limit: 255, null: false
+    t.string   "data_content_type", limit: 255
+    t.integer  "data_file_size",    limit: 4
+    t.integer  "assetable_id",      limit: 4
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width",             limit: 4
+    t.integer  "height",            limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "redactor_assets", ["assetable_type", "assetable_id"], name: "idx_redactor_assetable", using: :btree
+  add_index "redactor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_redactor_assetable_type", using: :btree
+
+  create_table "reports", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "phone",      limit: 255
+    t.string   "firm",       limit: 255
+    t.text     "body",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "obj_type",   limit: 255
   end
 
 end

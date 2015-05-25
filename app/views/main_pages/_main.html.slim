@@ -9,8 +9,7 @@ section.main_slider.white_chamber
           .slide_info
             = image_tag("slider/l1.png", class: "slide_im")
             h1 Банковские организации
-            p Безвозмездное изъятие, как того требуют нормы международного частного права, трансформирует сервитут.
-            a.button href="#"  Подробнее
+            a.button href="/partners/1"  Подробнее
 
     .slide style=("background-image: url(#{image_path('slider/2.jpg')})")
       .p_block
@@ -18,8 +17,7 @@ section.main_slider.white_chamber
           .slide_info
             = image_tag("slider/l2.png", class: "slide_im")
             h1 Частные пенсионные фонды
-            p Безвозмездное изъятие, как того требуют нормы международного частного права, трансформирует сервитут.
-            a.button href="#"  Подробнее
+            a.button href="/partners/2"  Подробнее
 
     .slide style=("background-image: url(#{image_path('slider/3.jpg')})")
       .p_block
@@ -27,8 +25,7 @@ section.main_slider.white_chamber
           .slide_info
             = image_tag("slider/l3.png", class: "slide_im")
             h1 Застройщики (девелоперы)
-            p Безвозмездное изъятие, как того требуют нормы международного частного права, трансформирует сервитут.
-            a.button href="#"  Подробнее
+            a.button href="/partners/3"  Подробнее
 
     .slide style=("background-image: url(#{image_path('slider/4.jpg')})")
       .p_block
@@ -36,8 +33,7 @@ section.main_slider.white_chamber
           .slide_info
             = image_tag("slider/l4.png", class: "slide_im")
             h1 Владельцы земельных активов
-            p Безвозмездное изъятие, как того требуют нормы международного частного права, трансформирует сервитут.
-            a.button href="#"  Подробнее
+            a.button href="/partners/4"  Подробнее
 
     .slide style=("background-image: url(#{image_path('slider/5.jpg')})")
       .p_block
@@ -45,8 +41,7 @@ section.main_slider.white_chamber
           .slide_info
             = image_tag("slider/l5.png", class: "slide_im")
             h1 Микрофинансовые организации
-            p Безвозмездное изъятие, как того требуют нормы международного частного права, трансформирует сервитут.
-            a.button href="#"  Подробнее
+            a.button href="/partners/5"  Подробнее
 
     .slide style=("background-image: url(#{image_path('slider/6.jpg')})")
       .p_block
@@ -54,8 +49,7 @@ section.main_slider.white_chamber
           .slide_info
             = image_tag("slider/l6.png", class: "slide_im")
             h1 Ломбарды
-            p Безвозмездное изъятие, как того требуют нормы международного частного права, трансформирует сервитут.
-            a.button href="#"  Подробнее
+            a.button href="/partners/6"  Подробнее
 article.content role="main"
 
   = @page.content.html_safe
@@ -73,18 +67,6 @@ article.content role="main"
       .container
         .tac
           h1 Заказ презентации
-          p.after_title Еще какой-то важный текст о том, как было бы хорошо получить презентацию и что без нее просто жить нельзя!
+          p.after_title
         .after_title
-          form#presentationForm.tac action=""
-            .form_element
-              .attr
-                input name="name" placeholder=("Как вас зовут?") type="text" /
-            .form_element
-              .attr
-                input name="company" placeholder=("Из какой вы фирмы?") type="text" /
-            .form_element
-              .attr
-                input name="phone" placeholder=("Ваш телефон") type="text" /
-            .form_element.submit
-              .attr
-                button.button type="submit"  Отправить
+          = render partial: "feedback_form", locals: { obj_type: 'presentation'}

@@ -1,7 +1,6 @@
 module Shared
   module Bootstrap
     module LabelStatusHelper
-
       LABEL_TYPES = {
         new:      'label label-info',
         check:    'label label-info',
@@ -65,7 +64,6 @@ module Shared
           val
         end
       end
-
     end
   end
 end

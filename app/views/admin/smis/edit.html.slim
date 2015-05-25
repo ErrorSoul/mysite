@@ -1,0 +1,11 @@
+- breadcrumb :admin_smi, @smi
+.row
+  .col-sm-12
+    
+    = bootstrap_form_for @smi, url: admin_smi_path(@smi), html: { multipart: true } do |f|
+      = render partial: 'admin/shared/post_form', locals: { f: f, resource: @smi }
+
+      .form-group.form-actions
+        .col-sm-offset-2.col-sm-4
+          = btn_sm_to_save '#', class: 'btn-block'
+          = btn_sm_to_cancel admin_smis_path, class: 'btn-block'

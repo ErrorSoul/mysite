@@ -1,10 +1,19 @@
-- fund = @fund || @page.fund
+- fund = @fund || (@page.fund if @page)
 - if fund
   nav.leftbc.col-container
+    - if fund.name == 'nska'
+      .inner.analitycs
+        .thispage
+          = t(:funds_analitycs)
+        ul
+          - fund.pages.slice(-4, 4).each do |page|
+            li
+              = link_to t(page.name), main_page_path(page)
     .inner
       .thispage О фонде
       ul
-        - fund.pages.each do |page|
+        - pages = fund.name == "nska" ? fund.pages.slice(0, 6) : fund.pages
+        - pages.each do |page|
           li
             = link_to t(page.name), main_page_path(page)
 
@@ -18,3 +27,9 @@
   nav.yellowbord.col-container
     - @page.main_page.pages.each do |page|
       = link_to t(page.name), main_page_path(page), class: "inner #{'active' if @page.name == page.name }"
+
+- post = @release || @releases || @smi || @smis
+- if post
+  nav.yellowbord.col-container
+    = link_to t(:press_centr), releases_path, class: "inner #{ releases_helper(post) }"
+    = link_to t(:smi), smis_path, class: "inner #{ smis_helper(post) }"

@@ -1,5 +1,4 @@
 class Asset < ActiveRecord::Base
-
   belongs_to :page
 
   mount_uploader :asset, AttachUploader
@@ -11,5 +10,4 @@ class Asset < ActiveRecord::Base
   def file_url
     asset.url
   end
-
 end

@@ -18,7 +18,6 @@
 #
 
 class Quartal < ActiveRecord::Base
-
   TYPES = %w(
     balance
     owners
@@ -39,5 +38,4 @@ class Quartal < ActiveRecord::Base
   end
 
   belongs_to :period
-
 end

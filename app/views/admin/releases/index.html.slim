@@ -1,0 +1,37 @@
+- breadcrumb :admin_releases
+
+.actions
+  = btn_sm_to_create  new_admin_release_path, class: 'create-period'
+.row
+  .col-sm-12
+    
+
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title = t :releases
+      .panel-body
+        .col-sm-12
+          table.table.table-striped
+            thead
+              tr
+                th = t :title
+                th = t :date
+                th
+
+              tbody
+                - unless @releases.any?
+                  tr
+                    td colspan='6' = t :not_found
+
+                - @releases.each do |release|
+                  tr
+                    td = link_to release.title, admin_release_path(release)
+                    td = link_to release.created_at.try(:strftime, "%d.%m.%Y"), admin_release_path(release)
+                    
+                    td.actions
+                      = btn_group do
+                        li = btn_to_review admin_release_path(release)
+                        li = btn_to_edit edit_admin_release_path(release)
+                        li.divider
+                        li = btn_to_delete admin_release_path(release)
+

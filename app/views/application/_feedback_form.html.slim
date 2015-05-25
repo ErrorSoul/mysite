@@ -1,0 +1,24 @@
+ = form_for Report.new, url: reports_path, method: 'post', class: 'tac', id: 'presentationForm', remote: true do |f|
+   = f.hidden_field :obj_type, value: obj_type
+   .form_element
+     .attr
+       = f.text_field :name, placeholder: ("Как вас зовут?")
+
+   .form_element
+       .attr
+         = f.text_field :phone, placeholder: ("Ваш телефон")
+   
+   - if obj_type == 'presentation'
+     .form_element
+       .attr
+         = f.text_field :firm, placeholder: ("Из какой вы фирмы?")
+     
+   - else
+     .form_element
+       .attr
+         = f.text_area :body, placeholder: ("Ваше сообщение")
+       
+   .form_element.submit
+     .attr
+       = f.submit t(:send), class: "button center-block"
+

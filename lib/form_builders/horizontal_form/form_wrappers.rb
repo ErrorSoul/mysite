@@ -1,7 +1,6 @@
 module FormBuilders
   module HorizontalForm
     module FormWrappers
-
       def group(*args, &block)
         options = args.extract_options!
         methods = args
@@ -49,7 +48,6 @@ module FormBuilders
           [head, body].join.html_safe
         end
       end
-
     end
   end
 end

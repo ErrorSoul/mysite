@@ -651,7 +651,7 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
     margin-top: 15px;
 }
 .button {
-    display: inline-block;
+    display: block;
     vertical-align: top;
     zoom: 1  ;
     //display: inline  ;
@@ -677,7 +677,7 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
 .tabs_nav ul li {font-size: 24px;color: #b4b4b4;line-height: 28px;padding-bottom: 30px;border-bottom: 8px solid transparent;display: inline-block;cursor: pointer;}
 .tabs_nav ul li:first-child {float: left;}
 .tabs_nav ul li.active {border-bottom: 8px solid #ffd800;color: #303030;cursor: default;}
-.tabs_nav ul li:last-child {float: right;}
+//.tabs_nav ul li:last-child {float: right;}
 
 .tabs-container .tab {display: none;}
 .tabs-container .tab.active {display: block;}
@@ -797,10 +797,10 @@ section.howto .square.arr {background-image: url("/images/ico/arrow.png")}
 section.howto .square.mail {background-image: url("/images/ico/mail.png")}
 section.howto .arrow {width: 128px;height: 82px;background: url("/images/ico/long_ar2.png") right center no-repeat transparent;position: absolute;top: 80px;right: -70px;}
 
-section.attention .square-mailb {display: block;width: 185px;height: 185px;border: 1px solid #cacaca;background-color: transparent;background-position: center center;background-repeat: no-repeat;background-image: url("/images/ico/mail_b.png");position: absolute;left: 0;top: 0}
+section.attention .square-mailb {display: block;width: 185px;height: 185px;border: 1px solid #cacaca;background-color: transparent;background-position: center center;background-repeat: no-repeat;background-image: url("/images/ico/mail_b.png");position: absolute;top: 0}
 section.attention h3 {color: #000000;font-size: 18px;}
 section.attention {font-size: 16px;}
-section.attention .toright {display: block;height: 115px;border: 1px solid #cacaca;border-left: 0;padding: 35px;margin-left: 185px;}
+section.attention .toright {display: block;height: 185px;border: 1px solid #cacaca;border-left: 0;padding: 35px;margin-left: 185px;}
 
 .timeline_slide {
   display: block;
@@ -978,3 +978,6 @@ section.attention .toright {display: block;height: 115px;border: 1px solid #caca
     }
 }
 
+.funds {
+    margin-bottom: 120px;
+}

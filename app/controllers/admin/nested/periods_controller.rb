@@ -23,7 +23,7 @@ class Admin::Nested::PeriodsController < Admin::BaseController
     end
   end
 
-  def update 
+  def update
     @period = @fund.periods.find params[:id]
     if @period.update_attributes period_params
       redirect_to admin_fund_nested_periods_path(@fund)
@@ -46,5 +46,4 @@ class Admin::Nested::PeriodsController < Admin::BaseController
   def period_params
     params[:period].permit!
   end
-
 end

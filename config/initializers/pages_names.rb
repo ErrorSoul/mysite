@@ -1,6 +1,6 @@
  NAMES = %w(
-    main
-    services
-    contact
-    about
-  ).freeze
+   main
+   services
+   contact
+   about
+ ).freeze

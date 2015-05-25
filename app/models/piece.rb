@@ -1,5 +1,4 @@
 class Piece < ActiveRecord::Base
-
   PERIODS = %i(
     month_1
     month_3
@@ -12,7 +11,7 @@ class Piece < ActiveRecord::Base
   scope :date_order, -> { order('observ_date ASC') }
 
   def date_month
-    try(:observ_date).to_s
+    try(:observ_date).strftime('%m.%Y')
   end
 
   def before_last
@@ -29,7 +28,7 @@ class Piece < ActiveRecord::Base
     if arr.size >= 4
       arr[-4]
     else
-      nil 
+      nil
     end
   end
 
@@ -38,13 +37,13 @@ class Piece < ActiveRecord::Base
     if arr.size >= 6
       arr[-6]
     else
-      nil 
+      nil
     end
   end
 
   def change(before_last)
     k = before_last.cost > cost ? -1 : 1
-    diff = before_last.cost/cost
+    diff = before_last.cost / cost
     if diff == 1.0
       b = 0
     else
@@ -55,32 +54,31 @@ class Piece < ActiveRecord::Base
 
   def change_three(three_ago)
     if three_ago
-       k = three_ago.cost > cost ? -1 : 1
-      diff = three_ago.cost/cost
+      k = three_ago.cost > cost ? -1 : 1
+      diff = three_ago.cost / cost
       if diff == 1.0
         b = 0
       else
         b  = diff
       end
-    k * b
+      k * b
     else
-      return "-"
+      return '-'
     end
   end
 
-   def change_six(six_ago)
+  def change_six(six_ago)
     if six_ago
-       k = six_ago.cost > cost ? -1 : 1
-      diff = six_ago.cost/cost
+      k = six_ago.cost > cost ? -1 : 1
+      diff = six_ago.cost / cost
       if diff == 1.0
         b = 0
       else
         b  = diff
-      end
-    k * b
+     end
+      k * b
     else
-      return "-"
+      return '-'
     end
-  end
-    
+ end
 end

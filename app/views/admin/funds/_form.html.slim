@@ -18,13 +18,6 @@
         = f.text_area :info, rows: 5, class: 'js-editor form-control'
         = f.hint :info
 
-  = f.panel :fund_strategy, title: t(:fund_strategy) do
-    = f.group :strategy do
-      = f.label :strategy, t(:fund_strategy), class: 'col-sm-2 required'
-      .col-sm-12
-        = f.text_area :strategy, rows: 5, class: 'js-editor form-control'
-        = f.hint :strategy
-
   = f.panel :fund_condition, title: t(:fund_condition) do
     = f.group :condition do
       = f.label :condition, t(:fund_condition), class: 'col-sm-2 required'

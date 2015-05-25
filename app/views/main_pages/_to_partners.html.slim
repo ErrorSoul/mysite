@@ -1,0 +1,11 @@
+= @page.content.html_safe
+section.common
+  .p_block
+    .container
+      .tac
+        h1 Заказ презентации
+        p.after_title Еще какой-то важный текст о том, как было бы хорошо получить презентацию и что без нее просто жить нельзя!
+      .after_title
+
+        = render partial: "feedback_form", locals: { obj_type: 'presentation'}
+

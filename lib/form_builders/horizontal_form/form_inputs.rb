@@ -1,7 +1,6 @@
 module FormBuilders
   module HorizontalForm
     module FormInputs
-
       FIELDS = %w(
         email_field
         password_field
@@ -26,7 +25,6 @@ module FormBuilders
         prepend_class %w(form-control-static), options
         super field, options
       end
-
     end
   end
 end

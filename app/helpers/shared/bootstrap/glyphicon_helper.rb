@@ -1,7 +1,6 @@
 module Shared
   module Bootstrap
     module GlyphiconHelper
-
       ICONS = %w(
         edit trash arrow-left ok plus search user print alert send
         sort file
@@ -22,7 +21,6 @@ module Shared
       def icon_class(icon)
         "glyphicon glyphicon-#{icon}"
       end
-
     end
   end
 end
