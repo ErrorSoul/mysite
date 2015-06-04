@@ -7,7 +7,10 @@
   = af.group "#{attr}_q".to_sym do
     = af.label attr, t(attr.to_s + "_q"), class: 'col-sm-2'
     .col-sm-4
+      = image_tag(af.object.send("#{attr}_q_file_url".to_sym))
+      = af.object.send("#{attr}_q").file.filename if af.object.send("#{attr}_q").file
       = af.file_field "#{attr}_q".to_sym, class: 'js-country'
+      //= af.hidden_field "#{attr}_q".to_sym
       = af.hint "#{attr}_q".to_sym
 
   = af.group "#{attr}_d" do
