@@ -10,6 +10,13 @@
         .col-sm-6
           = sf.text_field :name, name: "page[assets_attributes][#{index}][name]"
 
+      = sf.group :publicated_at do
+        = sf.label  :publicated_at, t(:date), class: 'col-sm-2'
+        .col-sm-4
+          .input-group.datepicker
+            .input-group-addon.glyphicon.glyphicon-calendar
+            = sf.text_field :publicated_at,  class: 'datepicker', name: "page[assets_attributes][#{index}][publicated_at]"
+
       = sf.group
         = sf.hidden_field :id, name: "page[assets_attributes][#{index}][id]"
         = sf.label :name, sf.object.file_name.truncate(15), class: 'col-sm-2'
@@ -18,21 +25,26 @@
     hr
 
   = f.fields_for :assets_attributes,  resource.assets.build do |sf|
-     = sf.group :asset, class: "asset_class" do
-       = sf.label :asset, t(:asset), class: 'col-sm-2'
+    - len = old_scans.length
+    .col-sm-10.asset-group.jumbotron data-num="#{len}"
+      = sf.group :asset, class: "asset_class" do
+        = sf.label :asset, t(:asset), class: 'col-sm-2'
 
-       .col-sm-2
-         - len = old_scans.length
-         = sf.file_field :asset, name: "page[assets_attributes][#{len}][asset]", data: {num: "#{len}"}
-         /= f.hint [options[:rel], :file], translate_for([hint_prefix, options[:type]].join)
-         /= link_to t(:add), '#', class: 'btn btn-success add_scans'
+        .col-sm-2
+          = sf.file_field :asset, name: "page[assets_attributes][#{len}][asset]"
 
-     = sf.group :name, class: "name_class" do
-       = sf.label :name, t(:name), class: 'col-sm-2'
+      = sf.group :name, class: "name_class" do
+        = sf.label :name, t(:name), class: 'col-sm-2'
 
-       .col-sm-6
-         - len = old_scans.length
-         = sf.text_field :name, name: "page[assets_attributes][#{len}][name]", data: {num: "#{len}"}, class: 'js-editor form-control'
-         = f.hint :name
+        .col-sm-6
+          = sf.text_field :name, name: "page[assets_attributes][#{len}][name]", class: 'js-editor form-control'
+          = f.hint :name
 
-     = link_to t(:add), '#', class: 'btn btn-success add_scans col-xs-6'
+      = sf.group :publicated_at do
+        = sf.label  :publicated_at, t(:date), class: 'col-sm-2'
+        .col-sm-4
+          .input-group.datepicker
+            .input-group-addon.glyphicon.glyphicon-calendar
+            = sf.text_field :publicated_at,  class: 'datepicker', name: "page[assets_attributes][#{len}][publicated_at]"
+
+    = link_to t(:add), '#', class: 'btn btn-success add_scans col-xs-6'
