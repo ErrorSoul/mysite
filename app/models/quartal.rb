@@ -38,4 +38,20 @@ class Quartal < ActiveRecord::Base
   end
 
   belongs_to :period
+
+  ATTRS.each  do |met|
+
+    define_method "#{met}_ext" do
+      send("#{met}").file.extension if send("#{met}").file
+    end
+
+    define_method "#{met}_file_url" do
+      if send("#{met}_ext").in? %w(xls xlsx)
+        "files/xls_a.png"
+      else
+       nil
+      end
+    end
+  end
+
 end
