@@ -2,6 +2,7 @@ $ ->
   #
   # Initialize Tips
   #
+  $('.datepickera').datetimepicker({format: 'DD.MM.YYYY HH:MM'})
   $('[data-toggle="popover"]').popover()
   $('[data-toggle="tooltip"]').tooltip()
 

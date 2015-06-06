@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: pieces
+#
+#  id          :integer          not null, primary key
+#  observ_date :date
+#  cost        :decimal(14, 3)
+#  pure_cost   :decimal(14, 3)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  fund_id     :integer
+#
+
 class Piece < ActiveRecord::Base
   PERIODS = %i(
     month_1
