@@ -13,7 +13,7 @@
       = sf.group :publicated_at do
         = sf.label  :publicated_at, t(:date), class: 'col-sm-2'
         .col-sm-4
-          .input-group.datepickera
+          .input-group.date.datepickera
             .input-group-addon.glyphicon.glyphicon-calendar
             = sf.text_field :publicated_at,  class: 'datepickera', name: "page[assets_attributes][#{index}][publicated_at]"
 
@@ -43,7 +43,7 @@
       = sf.group :publicated_at do
         = sf.label  :publicated_at, t(:date), class: 'col-sm-2'
         .col-sm-4
-          .input-group.datepickera
+          .input-group.date.datepickera
             .input-group-addon.glyphicon.glyphicon-calendar
             = sf.text_field :publicated_at,  class: 'datepickera', name: "page[assets_attributes][#{len}][publicated_at]"
 
