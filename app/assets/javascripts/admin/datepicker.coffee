@@ -7,7 +7,7 @@ $ ->
     @datepicker: '.datepickera'
     @options: {
       locale: 'ru',
-      format: 'DD.MM.YYYY HH:MM',
+      format: 'DD.MM.YYYY hh:mm',
       showTodayButton: true,
       showClear: true,
       calendarWeeks: true,
