@@ -18,4 +18,5 @@ section.simple_text
           - periods.each_with_index do |period, index|
             .tab-pane role="tabpanel" id=period.name class="#{'active' if index == 0}"
               = render partial: "admin/shared/report_table", locals: { period: period }
+              = render partial: "doc_table", locals: { resource: period }
  

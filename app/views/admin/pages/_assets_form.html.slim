@@ -18,26 +18,27 @@
             = sf.text_field :publicated_at,  class: 'datepickera', name: "page[assets_attributes][#{index}][publicated_at]"
 
       = sf.group
-        = sf.hidden_field :id, name: "page[assets_attributes][#{index}][id]"
+        = sf.hidden_field :id, name: "#{resource.class.to_s.downcase}[assets_attributes][#{index}][id]"
         = sf.label :name, sf.object.file_name.truncate(15), class: 'col-sm-2'
         label.control-label
-          = safe_join [ t(:destroy), sf.check_box(:_destroy, name: "page[assets_attributes][#{index}][_destroy]")]
+          = safe_join [ t(:destroy), sf.check_box(:_destroy, name: "#{resource.class.to_s.downcase}[assets_attributes][#{index}][_destroy]")]
     hr
 
   = f.fields_for :assets_attributes,  resource.assets.build do |sf|
     - len = old_scans.length
-    .col-sm-10.asset-group.jumbotron data-num="#{len}"
-      = sf.group :asset, class: "asset_class" do
+    .col-sm-10.asset-group data-num="#{len}"
+      = sf.group :asset do
         = sf.label :asset, t(:asset), class: 'col-sm-2'
+        = f.hint :asset
 
         .col-sm-2
-          = sf.file_field :asset, name: "page[assets_attributes][#{len}][asset]"
+          = sf.file_field :asset, name: "#{resource.class.to_s.downcase}[assets_attributes][#{len}][asset]"
 
       = sf.group :name, class: "name_class" do
         = sf.label :name, t(:name), class: 'col-sm-2'
 
         .col-sm-6
-          = sf.text_field :name, name: "page[assets_attributes][#{len}][name]", class: 'js-editor form-control'
+          = sf.text_field :name, name: "#{resource.class.to_s.downcase}[assets_attributes][#{len}][name]", class: 'js-editor form-control'
           = f.hint :name
 
       = sf.group :publicated_at do
@@ -45,6 +46,6 @@
         .col-sm-4
           .input-group.date.datepickera
             .input-group-addon.glyphicon.glyphicon-calendar
-            = sf.text_field :publicated_at,  class: 'datepickera', name: "page[assets_attributes][#{len}][publicated_at]"
+            = sf.text_field :publicated_at,  class: 'datepickera', name: "#{resource.class.to_s.downcase}[assets_attributes][#{len}][publicated_at]"
 
     = link_to t(:add), '#', class: 'btn btn-success add_scans col-xs-6'

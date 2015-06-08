@@ -4,4 +4,4 @@ section.simple_text
   .p_block.p_vertival
     article.container
       h1 = t(@page.name)
-      = render partial: 'doc_table'
+      = render partial: 'doc_table', locals: { resource: @page }

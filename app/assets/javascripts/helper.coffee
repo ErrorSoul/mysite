@@ -40,7 +40,7 @@ $ ->
         $(this).attr 'name', $(this).attr('name').replace(len, len + 1)
         $(this).val('')
       filesGroup.attr('data-num', len + 1)
-      filesGroup.find('.datepicker').datetimepicker()
+      filesGroup.find('.datepickera').datetimepicker()
       console.log('len', len)
       $(@).before(filesGroup)
 

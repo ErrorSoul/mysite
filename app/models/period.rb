@@ -14,6 +14,11 @@ class Period < ActiveRecord::Base
 
   validates :name, presence: true
 
+  has_many :assets, dependent: :destroy, inverse_of: :period
+
+  accepts_nested_attributes_for :assets, allow_destroy: true,
+    reject_if: proc { |attributes| attributes['name'].blank? || attributes['asset'].blank? }
+
   Quartal::TYPES.each do |type|
     name = type.to_sym
     has_one name, -> { where('obj_type = ?', type) },  dependent: :destroy, class_name: 'Quartal', inverse_of: :period

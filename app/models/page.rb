@@ -21,7 +21,8 @@ class Page < ActiveRecord::Base
   belongs_to :pageable, polymorphic: true
   has_many :pages, as: :pageable
 
-  accepts_nested_attributes_for :assets, allow_destroy: true, reject_if: proc { |attributes| attributes['name'].blank? }
+  accepts_nested_attributes_for :assets, allow_destroy: true,
+    reject_if: proc { |attributes| attributes['name'].blank? || attributes['asset'].blank? }
 
   def fund
     pageable if pageable.class.to_s == 'Fund'
