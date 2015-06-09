@@ -8,14 +8,15 @@
         = sf.label :name, t(:name), class: 'col-sm-2'
 
         .col-sm-6
-          = sf.text_field :name, name: "page[assets_attributes][#{index}][name]"
+          = sf.text_field :name, name: "#{resource.class.to_s.downcase}[assets_attributes][#{index}][name]"
+          = sf.hidden_field :asset, name: "#{resource.class.to_s.downcase}[assets_attributes][#{index}][asset]"
 
       = sf.group :publicated_at do
         = sf.label  :publicated_at, t(:date), class: 'col-sm-2'
         .col-sm-4
           .input-group.date.datepickera
             .input-group-addon.glyphicon.glyphicon-calendar
-            = sf.text_field :publicated_at,  class: 'datepickera', name: "page[assets_attributes][#{index}][publicated_at]"
+            = sf.text_field :publicated_at,  class: 'datepickera', name: "#{resource.class.to_s.downcase}[assets_attributes][#{index}][publicated_at]"
 
       = sf.group
         = sf.hidden_field :id, name: "#{resource.class.to_s.downcase}[assets_attributes][#{index}][id]"
