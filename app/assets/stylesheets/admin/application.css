@@ -17,4 +17,5 @@
  *= require froala_style.min.css
  *= require redactor-rails
  *= require redactor-rails/plugins
+ *= require bootstrap-datetimepicker
  */

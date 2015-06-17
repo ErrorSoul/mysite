@@ -9,7 +9,7 @@ namespace :db do
     source = 'http://capeman.ru/?page_id=115'
     pg = Nokogiri::HTML(open(source))
 
-    pg = pg.css('.post ol')[1]
+    pg = pg.css('.post ol')[2]
 
     pg.css('li a').each do |link|
       puts "LINK CONTENT =>  #{link['href']}"

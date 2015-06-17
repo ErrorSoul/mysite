@@ -28,7 +28,7 @@
   = f.fields_for :assets_attributes,  resource.assets.build do |sf|
     - len = old_scans.length
     .col-sm-10.asset-group.jumbotron data-num="#{len}"
-      = sf.group :asset do
+      = sf.group :asset, class: "asset_class" do
         = sf.label :asset, t(:asset), class: 'col-sm-2'
         = f.hint :asset
 
