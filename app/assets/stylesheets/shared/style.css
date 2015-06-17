@@ -542,12 +542,12 @@ input.error {
 .grey_links.twoblock .link .text {
   font-size: 16px;font-family: 'HelveticaNeue-Regular';color: #848484; padding: 15px;line-height: 20px;
 }
-.grey_links.twoblock .link:hover .text {color: #ffffff;}
+.grey_links.twoblock .link:hover .text {//color: #ffffff;}
 .grey_links .link:hover {
-    background: #4c98cd;
+    //background: #4c98cd;
 }
 .grey_links .link:hover .name {
-    color: #fff;
+    //color: #fff;
 }
 
 .grey_links .link:hover .image {
