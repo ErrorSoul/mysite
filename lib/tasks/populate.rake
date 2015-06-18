@@ -5,11 +5,11 @@ namespace :db do
     require 'open-uri'
     require 'nokogiri'
     base = 'tmp/'
-    page = Page.find(32)
-    source = 'http://capeman.ru/?page_id=115'
+    page = Page.find(17)
+    source = 'http://capeman.ru/?page_id=401'
     pg = Nokogiri::HTML(open(source))
 
-    pg = pg.css('.post ol')[2]
+    pg = pg.css('.post ul')[0]
 
     pg.css('li a').each do |link|
       puts "LINK CONTENT =>  #{link['href']}"
