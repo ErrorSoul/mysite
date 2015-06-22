@@ -4,4 +4,7 @@ section.simple_text
       h1 = @page.human_name
       = render partial: 'doc_table', locals: { resource: @page }
 
-= @page.content.html_safe
+section.simple_text
+  .p_block.p_vertival
+    article.container
+      = @page.content.html_safe
