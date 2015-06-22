@@ -16,4 +16,9 @@ class Fund < ActiveRecord::Base
   has_many :pages, as: :pageable
   has_many :periods
   has_many :pieces
+
+  def human_name
+    name.in?(%w(isu_capital isu_ai)) ? I18n.t(:docs) : I18n.t(:docs_isu)
+  end
+
 end

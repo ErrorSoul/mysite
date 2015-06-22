@@ -15,7 +15,7 @@
         - pages = fund.name == "nska" ? fund.pages.slice(0, 6) : fund.pages
         - pages.each do |page|
           li
-            = link_to t(page.name), main_page_path(page)
+            = link_to page.human_name, main_page_path(page)
 
 
 - if @page && @page.name == "about"

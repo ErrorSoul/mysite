@@ -32,7 +32,7 @@ crumb :admin_pages do
 end
 
 crumb :page do |page|
-  link t(page.name), main_page_path(page)
+  link page.human_name, main_page_path(page)
 
   if page.fund
     parent page.fund
@@ -44,7 +44,7 @@ crumb :page do |page|
 end
 
 crumb :admin_page do |page|
-  link t(page.name), admin_page_path(page)
+  link page.human_name, admin_page_path(page)
 
   if page.fund
     parent :funds_pages, page.fund
