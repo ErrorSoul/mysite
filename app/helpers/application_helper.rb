@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module ApplicationHelper
   include Shared::BootstrapHelper
 
@@ -60,5 +61,13 @@ module ApplicationHelper
     else
       smis_path
     end
+  end
+
+  def docs_selected(page)
+    files = page.assets
+    buh_info = files.select { |m| m if m.name.mb_chars.downcase.include?('ухгал'.mb_chars.downcase) }
+    open_info = files.select { |m| m  if m.name.mb_chars.downcase.include?('собственных'.mb_chars.downcase) }
+    others = files - (buh_info + open_info)
+    [buh_info, open_info, others]
   end
 end

@@ -1,7 +1,7 @@
 .text.after_title
   table.t1.docs
     tbody
-      - resource.assets.each do |asset|
+      - resources.each do |asset|
         tr
           td class=file_type(asset.asset.file.file)
             = link_to  asset.name, asset.file_url

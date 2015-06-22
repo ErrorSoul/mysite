@@ -2,7 +2,14 @@ section.simple_text
   .p_block.p_vertival
     article.container
       h1 = @page.human_name
-      = render partial: 'doc_table', locals: { resource: @page }
+      - buh_info, open_info, others = docs_selected(@page)
+
+      h4.margin_title = t(:buh_info)
+      = render partial: 'doc_table', locals: { resources: buh_info }
+
+      h4.margin_title = t(:own_has)
+      = render partial: 'doc_table', locals: { resources: open_info }
+      = render partial: 'doc_table', locals: { resources: others }
 
 section.simple_text
   .p_block.p_vertival
