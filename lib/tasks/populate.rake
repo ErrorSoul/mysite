@@ -37,15 +37,15 @@ namespace :db do
 
   desc 'populate the pieces of funds with date and cost'
   task populate: :environment do
-    workbook = RubyXL::Parser.parse('site/all.xlsx')
+    workbook = RubyXL::Parser.parse('public/all.xlsx')
 
-    sh = workbook[5]
+    sh = workbook[1]
     date = nil
-    @fund = Fund.find(2)
+    @fund = Fund.find(4)
     Piece.transaction do
       sh.each_with_index do |row, ind|
         # puts ind, "index"
-        if ind >= 40 && row
+        if ind >= 31 && row
           if row.cells[1] && row.cells[1].value
             date ||= row.cells[0].value
             if date == row.cells[0].value
@@ -56,6 +56,9 @@ namespace :db do
                )
               puts "#{row.cells[0].value}  #{row.cells[1].value} #{row.cells[2].value}"
               date += 1.months
+	      if date.day == 28 and date.month != 2
+	         date += 1.day
+	      end
             end
           end
         end

@@ -63,13 +63,6 @@ ActiveRecord::Schema.define(version: 20150618092252) do
 
   add_index "pages", ["pageable_type", "pageable_id"], name: "index_pages_on_pageable_type_and_pageable_id", using: :btree
 
-  create_table "partner_pages", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-  end
-
   create_table "periods", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "fund_id",    limit: 4

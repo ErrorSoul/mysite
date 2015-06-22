@@ -63,6 +63,19 @@ module ApplicationHelper
     end
   end
 
+  def weekend?(date)
+    date.sunday? || date.saturday?
+  end
+
+  def next_after_weekend(date)
+    date +=  1.day
+    if !weekend?(date)
+      date
+    else
+      next_after_weekend(date + 1.day)
+    end
+  end
+
   def docs_selected(page)
     files = page.assets
     buh_info = files.select { |m| m if m.name.mb_chars.downcase.include?('ухгал'.mb_chars.downcase) }

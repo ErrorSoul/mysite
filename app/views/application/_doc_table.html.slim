@@ -1,8 +1,9 @@
-.text.after_title
+.text.under_title
   table.t1.docs
     tbody
-      - resources.each do |asset|
-        tr
-          td class=file_type(asset.asset.file.file)
-            = link_to  asset.name, asset.file_url
-          td = asset.publicated_at.strftime("%d.%m.%Y %H:%M")
+      - if resources
+        - resources.each do |asset|
+          tr
+            td class=file_type(asset.asset.file.file)
+              = link_to  asset.name, asset.file_url
+            td = asset.publicated_at.strftime("%d.%m.%Y %H:%M")

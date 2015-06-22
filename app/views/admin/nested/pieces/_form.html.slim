@@ -10,13 +10,13 @@
   = f.group :cost do
     = f.label :cost, t(:cost), class: 'col-sm-2 required'
     .col-sm-4
-      = f.text_field :cost
+      = f.number_field :cost
       = f.hint :cost
 
   = f.group :pure_cost do
     = f.label :pure_cost, t(:pure_cost), class: 'col-sm-2 required'
     .col-sm-4
-      = f.text_field :pure_cost
+      = f.number_field :pure_cost
       = f.hint :pure_cost
 
 

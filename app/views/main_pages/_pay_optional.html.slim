@@ -1,6 +1,6 @@
 #data-fund.after_title.col-container data-fund=@page.fund.id
       .col-50.pad-r-60
-        h2= "Стоимость пая и чистых активов на #{piece.observ_date.try(:strftime, '%d.%m.%Y')}" 
+        h2= "Стоимость пая и чистых активов. Опубликовано #{piece.observ_date.try(:strftime, '%d.%m.%Y')}"
         table.t1.report.after_title.tc.bln.wsn
           thead
             tr
@@ -13,14 +13,14 @@
               th= before_last.observ_date.try(:strftime, '%d.%m.%Y')
               td= before_last.cost
               td.bln rowspan="2"
-                = "#{piece.change(before_last).round(2)}%"
+                = "#{piece.change_diff(before_last).round(2)}%"
               td= before_last.pure_cost
             tr
               th= piece.observ_date.try(:strftime, '%d.%m.%Y')
               td= piece.cost
               td= piece.pure_cost
       .col-50
-        h2= "Динамика стоимости пая на #{piece.observ_date.try(:strftime, '%d.%m.%Y')}"
+        h2= "Динамика стоимости пая. Опубликовано #{piece.observ_date.try(:strftime, '%d.%m.%Y')}"
         table.t1.report.after_title.tc.bln.wsn
           thead
             tr
@@ -34,11 +34,11 @@
                 
           tbody
             tr
-              td = "#{ piece.change(before_last).round(2)}%"
-              td = "#{ piece.change_three(three_ago) == '-' ? '-' : piece.change_three(three_ago).round(2) }%"
-              td = "#{ piece.change_six(six_ago) == '-' ? '-' : piece.change_six(six_ago).round(2) }%"
+              td = "#{ piece.change_diff(before_last).round(2)}%"
+              td = "#{ piece.change_diff(three_ago) == '-' ? '-' : piece.change_diff(three_ago).round(2) }%"
+              td = "#{ piece.change_diff(six_ago) == '-' ? '-' : piece.change_diff(six_ago).round(2) }%"
               td 3.21%
-              td = "#{ piece.change(found).round(2) }%"
+              td = "#{ piece.change_diff(found).round(2) }%"
     section.simple_text.b_gray
       .p_block.p_vertival
         article.container

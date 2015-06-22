@@ -69,7 +69,7 @@ p.after_title {
 }
 .funds .common p.after_title {color: #ffffff;}
 p + p {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 /* MIXINS */
 .inlineblock {
@@ -489,7 +489,7 @@ input.error {
     border-left: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
     height: 208px;
-    cursor: pointer;
+    cursor: default;
     text-align: center;
     width: 33%;
     -webkit-transition: all 0.2s;
