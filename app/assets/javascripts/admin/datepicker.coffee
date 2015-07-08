@@ -4,10 +4,10 @@ $ ->
   #----------------------------------------------------------------------------
 
   class DatePicker
-    @datepicker: '.datepicker'
+    @datepicker: '.datepickera'
     @options: {
       locale: 'ru',
-      format: 'DD.MM.YYYY',
+      format: 'DD.MM.YYYY HH:MM',
       showTodayButton: true,
       showClear: true,
       calendarWeeks: true,
@@ -22,7 +22,7 @@ $ ->
       $(@datepicker).datetimepicker @options
 
     @setProperInputValue: =>
-      $.each $('input.datepicker'), (index, input) ->
+      $.each $('input.datepickera'), (index, input) ->
         date = $(input).attr 'value'
 
         if date

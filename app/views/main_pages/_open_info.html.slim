@@ -1,7 +1,24 @@
-= @page.content.html_safe
-
 section.simple_text
   .p_block.p_vertival
     article.container
-      h1 = t(@page.name)
-      = render partial: 'doc_table'
+      - if @page.id == 32
+        h1 = @page.human_name
+        - buh_info, open_info, others = docs_selected(@page)
+
+        h2.margin_title = t(:buh_info)
+        = render partial: 'doc_table', locals: { resources: buh_info }
+
+        h2.margin_title = t(:own_has)
+        = render partial: 'doc_table', locals: { resources: open_info }
+        = render partial: 'doc_table', locals: { resources: others }
+      - else
+        h1 = @page.human_name
+        = render partial: 'doc_table', locals: { resources: @page.assets }
+
+section.simple_text
+  .p_block
+    article.container
+      p.last-update style='margin-top: -60px;'
+        = t(:last_updates)
+        span = @page.assets.first.publicated_at.strftime("%d.%m.%Y %H:%M")
+      = @page.content.html_safe

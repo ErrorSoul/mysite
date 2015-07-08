@@ -17,5 +17,11 @@ section.simple_text
         .tab-content
           - periods.each_with_index do |period, index|
             .tab-pane role="tabpanel" id=period.name class="#{'active' if index == 0}"
-              = render partial: "admin/shared/report_table", locals: { period: period }
+              - unless @page.fund.name.in? (%w(isu_capital isu_ai))
+                = render partial: "admin/shared/report_table", locals: { period: period }
+              = render partial: "doc_table", locals: { resources: period.assets }
  
+section.simple_text
+  .p_block
+    article.container
+      = @page.content.html_safe

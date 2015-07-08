@@ -69,7 +69,7 @@ p.after_title {
 }
 .funds .common p.after_title {color: #ffffff;}
 p + p {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 /* MIXINS */
 .inlineblock {
@@ -489,7 +489,7 @@ input.error {
     border-left: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
     height: 208px;
-    cursor: pointer;
+    cursor: default;
     text-align: center;
     width: 33%;
     -webkit-transition: all 0.2s;
@@ -541,13 +541,6 @@ input.error {
 }
 .grey_links.twoblock .link .text {
   font-size: 16px;font-family: 'HelveticaNeue-Regular';color: #848484; padding: 15px;line-height: 20px;
-}
-.grey_links.twoblock .link:hover .text {color: #ffffff;}
-.grey_links .link:hover {
-    background: #4c98cd;
-}
-.grey_links .link:hover .name {
-    color: #fff;
 }
 
 .grey_links .link:hover .image {

@@ -16,8 +16,8 @@
   = af.group "#{attr}_d" do
     = af.label attr, t(attr.to_s + "_d"), class: 'col-sm-2'
     .col-sm-4
-      .input-group.datepicker
+      .input-group.datepickera
         .input-group-addon.glyphicon.glyphicon-calendar
-        = af.text_field "#{attr}_d".to_sym,  class: 'datepicker'
+        = af.text_field "#{attr}_d".to_sym,  class: 'datepickera'
       
       = af.hint "#{attr}_d".to_sym

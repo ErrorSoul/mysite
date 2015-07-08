@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: pieces
+#
+#  id          :integer          not null, primary key
+#  observ_date :date
+#  cost        :decimal(14, 3)
+#  pure_cost   :decimal(14, 3)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  fund_id     :integer
+#
+
 class Piece < ActiveRecord::Base
   PERIODS = %i(
     month_1
@@ -14,10 +27,10 @@ class Piece < ActiveRecord::Base
     try(:observ_date).strftime('%m.%Y')
   end
 
-  def before_last
+  def before_last(num)
     arr = fund.pieces.date_order
-    if arr.size > 2
-      arr[-2]
+    if arr.size > num
+      arr[num * (-1)]
     else
       arr.last
     end
@@ -40,6 +53,15 @@ class Piece < ActiveRecord::Base
       nil
     end
   end
+
+  def change_diff(before_last)
+    ((cost - before_last.cost) / before_last.cost) * 100
+  end
+
+  #
+  # TODO: delete duplicate functions
+  #
+  #
 
   def change(before_last)
     k = before_last.cost > cost ? -1 : 1
