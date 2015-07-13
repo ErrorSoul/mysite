@@ -289,3 +289,6 @@ DEPENDENCIES
   unicorn
   web-console (~> 2.0)
   wysiwyg-rails
+
+BUNDLED WITH
+   1.10.3
