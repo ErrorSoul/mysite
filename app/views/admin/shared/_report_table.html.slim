@@ -15,7 +15,7 @@ table.t1.report.after_title
           - if quart.send("#{attr}_q").file
             td.xls
               |
-              = quart.send("#{attr}_d").strftime("%d.%m.%Y, 12:00") if quart.send("#{attr}_d")
+              = quart.send("#{attr}_d").strftime("%d.%m.%Y, %H:%M") if quart.send("#{attr}_d")
               br/
               = link_to "Скачать *xls", quart.send("#{attr}_q").url
           - else
