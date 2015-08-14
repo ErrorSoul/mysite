@@ -15,23 +15,35 @@
               label.col-sm-2.control-label = t :name
               .col-sm-4
                 p.form-control-static = @period.name
+        - if @fund.name.in? (%w(isu_capital isu_ai))
 
-        - Quartal::TYPES.each do |type|
           .panel.panel-default
             .panel-heading
-              h4.panel-title = t type
+              h4.panel-title = t :files
             .panel-body
-              -  Quartal::NUMS.each do |attr|
+              - @period.assets.each do |asset|
                 .form-group
-                  label.col-sm-2.control-label = t "#{attr}_q"
+                  label.col-sm-2.control-label = t :name
                   .col-sm-4
-                    p.form-control-static = @period.send(type).send("#{attr}_q").file.try(:original_filename)
-                .form-group
-                  label.col-sm-2.control-label = t "#{attr}_d"
-                  .col-sm-4
-                    p.form-control-static = @period.send(type).send("#{attr}_d")
+                    p.form-control-static = asset.name
           
-       
+        - unless @fund.name.in? (%w(isu_capital isu_ai))
+          - Quartal::TYPES.each do |type|
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title = t type
+              .panel-body
+                -  Quartal::NUMS.each do |attr|
+                  .form-group
+                    label.col-sm-2.control-label = t "#{attr}_q"
+                    .col-sm-4
+                      p.form-control-static = @period.send(type).send("#{attr}_q").file.try(:original_filename)
+                  .form-group
+                    label.col-sm-2.control-label = t "#{attr}_d"
+                    .col-sm-4
+                      p.form-control-static = @period.send(type).send("#{attr}_d")
+
+
         .form-group.form-actions
           .col-sm-offset-2.col-sm-4
             = btn_sm_to_edit edit_admin_fund_nested_period_path(@fund, @period), class: 'btn-block'

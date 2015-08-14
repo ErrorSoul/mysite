@@ -53,7 +53,7 @@ ru:
   dynamic_pure_f:  'Динамика стоимости чистых активов фонда'
   about_fund:      'О фонде'
   about_isu:       'Об ИСУ'
-
+  files:            'Файлы'
   # FUNDS
 
   main:     'Главная страница'
