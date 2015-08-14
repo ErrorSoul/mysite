@@ -45,8 +45,8 @@
       = sf.group :publicated_at do
         = sf.label  :publicated_at, t(:date), class: 'col-sm-2'
         .col-sm-4
-          .input-group.date.datepickera
+          .input-group.date.datepicker
             .input-group-addon.glyphicon.glyphicon-calendar
-            = sf.text_field :publicated_at,  class: 'datepickera', name: "#{resource.class.to_s.downcase}[assets_attributes][#{len}][publicated_at]"
+            = sf.text_field :publicated_at,  class: 'datepicker', name: "#{resource.class.to_s.downcase}[assets_attributes][#{len}][publicated_at]"
 
     = link_to t(:add), '#', class: 'btn btn-success add_scans col-xs-6'
