@@ -23,5 +23,6 @@
     article.container.p_block.p_vertival.text.tab
      - if !@fund.name.in?(%w(isu_capital isu_ai))
        = @fund.condition.html_safe
-     - else
+     
+     - if @fund.name == "isu_capital"
        = render partial: "isu_cap_graphs"
