@@ -3,6 +3,7 @@
 - breadcrumb @fund
 
 = @fund.content.html_safe
+
 .block-inside
 - unless @fund.name == 'hotey'
   nav.tabs_nav.tabs data-target="1"
@@ -26,3 +27,14 @@
      
      - if @fund.name == "isu_capital"
        = render partial: "isu_cap_graphs"
+- if @fund.name == "isu_capital"
+  .p_block.p_vertival
+    article.container
+      //p
+        span style=("*/ orphans: 2; color: rgb(18, 36, 55); font-family: HelveticaNeue-Thin; font-size: 36px; line-height: 0.79cm; widows: 2;")
+          strong Об ИСУ
+      p Индивидуальное обозначение, идентифицирующее ипотечные сертификаты участия с ипотечным покрытием – «ИСУ КАПИТАЛ» 
+      p 
+        | (Правила доверительного управления зарегистрированы Банком России 26.08.2014г. за №0026).
+      p Дата окончания срока действия договора доверительного управления ипотечным покрытием  01.07.2020г.
+      p Покрытие отвечает требованиям Закона «Об ипотечных ценных бумагах» от 11.11.2003г.
