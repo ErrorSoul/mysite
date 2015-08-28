@@ -489,7 +489,7 @@ input.error {
     border-left: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
     height: 208px;
-    cursor: default;
+    cursor: pointer;
     text-align: center;
     width: 33%;
     -webkit-transition: all 0.2s;
@@ -557,6 +557,13 @@ input.error {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.grey_links.twoblock .linka:hover .text {color: #ffffff;}
+.grey_links .linka:hover {
+    background: #4c98cd;
+}
+.grey_links .linka:hover .name {
+    color: #fff;
 }
 .main_about {
     display: block;
