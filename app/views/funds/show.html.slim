@@ -24,7 +24,7 @@
     article.container.p_block.p_vertival.text.tab
      - if !@fund.name.in?(%w(isu_capital isu_ai))
        = @fund.condition.html_safe
-     
+
      - if @fund.name == "isu_capital"
        = render partial: "isu_cap_graphs"
 - if @fund.name == "isu_capital"
@@ -33,8 +33,14 @@
       //p
         span style=("*/ orphans: 2; color: rgb(18, 36, 55); font-family: HelveticaNeue-Thin; font-size: 36px; line-height: 0.79cm; widows: 2;")
           strong Об ИСУ
+      p По вопросам приобретения ипотечных сертификатов обращаться по телефонам
+      p
+        <strong> 8(495)134 44 40</strong> доб. <strong>140 </strong>
+      p
+        <strong>8 964 761 82 99</strong>
+      p Сидоров Виктор
       p Индивидуальное обозначение, идентифицирующее ипотечные сертификаты участия с ипотечным покрытием – «ИСУ КАПИТАЛ» 
-      p 
+      p
         | (Правила доверительного управления зарегистрированы Банком России 26.08.2014г. за №0026).
       p Дата окончания срока действия договора доверительного управления ипотечным покрытием  01.07.2020г.
       p Покрытие отвечает требованиям Закона «Об ипотечных ценных бумагах» от 11.11.2003г.
