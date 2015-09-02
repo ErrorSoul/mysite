@@ -15,6 +15,7 @@
           li Условия инвестирования
         - if @fund.name == "isu_capital"
           li Характеристики ипотечного покрытия
+          li Инфраструктура ИСУ
   section.simple_text.b_gray.tabs_container.tabs-container data-id="1"
     article.p_block.p_vertival.container.text.tab.active.without-padding
       = @fund.info.html_safe
@@ -27,6 +28,12 @@
 
      - if @fund.name == "isu_capital"
        = render partial: "isu_cap_graphs"
+    - if @fund.name == "isu_capital"
+      article.container.p_block.p_vertival.text.tab
+        .col-md-12
+          .col-md-10.center-block
+            h3 Соотношение залог/кредит
+            = image_tag('scheme.jpeg', class: "img-responsive")
 - if @fund.name == "isu_capital"
   .p_block.p_vertival
     article.container
