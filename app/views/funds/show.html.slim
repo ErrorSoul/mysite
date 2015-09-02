@@ -31,9 +31,10 @@
     - if @fund.name == "isu_capital"
       article.container.p_block.p_vertival.text.tab
         .col-md-12
-          .col-md-12.center-block
-            h3 Инфраструктура ИСУ
-            = image_tag('scheme.jpg', class: "img-responsive")
+          .row
+            .col-md-12.center-block
+              h3.text-center Инфраструктура ИСУ
+              = image_tag('scheme.jpg', class: "img-responsive center-block")
 - if @fund.name == "isu_capital"
   .p_block.p_vertival
     article.container
