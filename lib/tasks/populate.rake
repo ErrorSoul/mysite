@@ -55,6 +55,26 @@ namespace :db do
     end
   end
 
+  desc 'copy pages for new isu'
+  task copy_pages: :environment do
+    isu = Fund.find_by(name: 'isu_ai')
+    funds = %w(isu_a2 isu_a3).map do |name|
+      Fund.find_by(name: name)
+    end
+    funds.each do |fund|
+      isu.pages.each do |page|
+        fund.pages << page.make_copy
+      end
+    end
+  end
+
+  desc 'new isu with pages'
+  task create_isu: :environment do
+    RAKE::TASK["db:new_isu"].invoke
+    RAKE::TASK["db:copy_isu"].invoke
+    RAKE::TASK["db:copy_pages"].invoke
+  end
+
   desc 'populate the pieces of funds with date and cost'
   task populate: :environment do
     workbook = RubyXL::Parser.parse('public/all.xlsx')

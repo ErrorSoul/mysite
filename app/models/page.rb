@@ -40,4 +40,12 @@ class Page < ActiveRecord::Base
     end
   end
 
+  def make_copy
+    page_new = Page.new
+    page_new.name = self.name
+    page_new.content = self.content
+    page_new.save!
+    page_new
+  end
+
 end
