@@ -18,11 +18,11 @@ class Fund < ActiveRecord::Base
   has_many :pieces
 
   def human_name
-    name.in?(%w(isu_capital isu_ai)) ? I18n.t(:docs) : I18n.t(:docs_isu)
+    name.in?(%w(isu_capital isu_ai isu_a2 isu_a3)) ? I18n.t(:docs) : I18n.t(:docs_isu)
   end
 
   def human_about
-     name.in?(%w(isu_capital isu_ai)) ? I18n.t(:about_isu) : I18n.t(:about_fund)
+     name.in?(%w(isu_capital isu_ai isu_a2 isu_a3)) ? I18n.t(:about_isu) : I18n.t(:about_fund)
   end
 
 end
