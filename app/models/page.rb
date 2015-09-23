@@ -34,7 +34,7 @@ class Page < ActiveRecord::Base
 
   def human_name
     if  name == 'docs' && fund
-      fund.name.in?(%w(isu_capital isu_ai)) ? I18n.t(:docs_isu) : I18n.t(:docs)
+      fund.name.in?(%w(isu_capital isu_ai isu_a3 isu_a2)) ? I18n.t(:docs_isu) : I18n.t(:docs)
     else
       I18n.t(name)
     end
