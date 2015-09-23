@@ -35,6 +35,26 @@ namespace :db do
     end
   end
 
+  desc 'populate new isu'
+  task new_isu: :environment do
+    %w(isu_a2 isu_a3).each do |name|
+      Fund.create!(name: name, content: "")
+    end
+  end
+
+  desc 'copy content for new isu'
+  task copy_isu: :environment do
+    isu = Fund.find_by(name: 'isu_ai')
+    %w(isu_a2 isu_a3).map do |name|
+      Fund.find_by(name: name)
+    end.each do |fund|
+      fund.info = isu.info
+      fund.content = isu.content
+      fund.condition = isu.condition
+      fund.save!
+    end
+  end
+
   desc 'populate the pieces of funds with date and cost'
   task populate: :environment do
     workbook = RubyXL::Parser.parse('public/all.xlsx')

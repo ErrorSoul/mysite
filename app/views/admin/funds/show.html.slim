@@ -19,21 +19,21 @@
             .form-group
               label.col-sm-2.control-label = t :content
               .col-sm-12
-                p.form-control-static = @fund.content.html_safe
+                p.form-control-static = @fund.content.html_safe if @fund.content
 
         .panel.panel-default
           .panel-heading
             h4.panel-title = t :fund_info
           .panel-body
             .col-sm-12
-              p.form-control-static = @fund.info.html_safe
+              p.form-control-static = @fund.info.html_safe if @fund.info
 
         .panel.panel-default
           .panel-heading
             h4.panel-title = t :fund_condition
           .panel-body
             .col-sm-12
-              p.form-control-static = @fund.condition.html_safe
+              p.form-control-static = @fund.condition.html_safe if @fund.condition
 
         .form-group.form-actions
           .col-sm-offset-2.col-sm-4
