@@ -9,7 +9,8 @@
   nav.tabs_nav.tabs data-target="1"
     .p_block
       ul.container.col-container
-        li.active Сводная информация
+        - unless @fund.name.in?(%w(isu_a2 isu_a3))
+          li.active Сводная информация
         //li Стратегия управления
         - unless @fund.name.in? %w(isu_capital isu_ai isu_a2 isu_a3)
           li Условия инвестирования
@@ -18,7 +19,8 @@
           li Инфраструктура ИСУ
   section.simple_text.b_gray.tabs_container.tabs-container data-id="1"
     article.p_block.p_vertival.container.text.tab.active.without-padding
-      = @fund.info.html_safe
+      - unless @fund.name.in?(%w(isu_a2 isu_a3))
+        = @fund.info.html_safe
 
     //= @fund.strategy.html_safe
 
