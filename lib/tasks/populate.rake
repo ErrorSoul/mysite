@@ -70,9 +70,9 @@ namespace :db do
 
   desc 'new isu with pages'
   task create_isu: :environment do
-    RAKE::TASK["db:new_isu"].invoke
-    RAKE::TASK["db:copy_isu"].invoke
-    RAKE::TASK["db:copy_pages"].invoke
+    Rake::Task["db:new_isu"].invoke
+    Rake::Task["db:copy_isu"].invoke
+    Rake::Task["db:copy_pages"].invoke
   end
 
   desc 'populate the pieces of funds with date and cost'
