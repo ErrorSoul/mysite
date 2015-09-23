@@ -11,7 +11,7 @@
       ul.container.col-container
         li.active Сводная информация
         //li Стратегия управления
-        - unless @fund.name.in? %w(isu_capital isu_ai)
+        - unless @fund.name.in? %w(isu_capital isu_ai isu_a2 isu_a3)
           li Условия инвестирования
         - if @fund.name == "isu_capital"
           li Характеристики ипотечного покрытия
@@ -23,7 +23,7 @@
     //= @fund.strategy.html_safe
 
     article.container.p_block.p_vertival.text.tab
-     - if !@fund.name.in?(%w(isu_capital isu_ai))
+     - if !@fund.name.in?(%w(isu_capital isu_ai isu_a2 isu_a3))
        = @fund.condition.html_safe
 
      - if @fund.name == "isu_capital"
