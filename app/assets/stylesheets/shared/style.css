@@ -491,7 +491,7 @@ input.error {
     height: 208px;
     cursor: pointer;
     text-align: center;
-    width: 33%;
+    width: 43%;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
@@ -980,4 +980,8 @@ section.attention .toright {display: block;height: 185px;border: 1px solid #caca
 
 .funds {
     margin-bottom: 120px;
+}
+
+.margin-7 {
+    margin-left: 7%;
 }
