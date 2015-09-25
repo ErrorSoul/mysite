@@ -489,9 +489,9 @@ input.error {
     border-left: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
     height: 208px;
-    cursor: default;
+    cursor: pointer;
     text-align: center;
-    width: 33%;
+    width: 43%;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
@@ -557,6 +557,13 @@ input.error {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.grey_links.twoblock .linka:hover .text {color: #ffffff;}
+.grey_links .linka:hover {
+    background: #4c98cd;
+}
+.grey_links .linka:hover .name {
+    color: #fff;
 }
 .main_about {
     display: block;
@@ -667,7 +674,7 @@ h3 {color: #00b2ed;font-family: 'HelveticaNeue-Bold';font-size: 16px;margin-bott
 .text ul li {display: list-item;list-style-image: url("/images/ico/li.png");padding-left: 16px;margin-left: 20px;line-height: 45px;font-size: 16px;font-family: 'HelveticaNeue-Italic';font-style: italic;font-weight: 400;font-stretch: normal;}
 
 .tabs_nav {text-align: center;}
-.tabs_nav ul li {font-size: 24px;color: #b4b4b4;line-height: 28px;padding-bottom: 30px;border-bottom: 8px solid transparent;display: inline-block;cursor: pointer;}
+.tabs_nav ul li {font-size: 24px;color: #b4b4b4;line-height: 28px;padding-bottom: 30px;border-bottom: 8px solid transparent;display: inline-block;cursor: pointer; float: left; margin: 0px 18px}
 .tabs_nav ul li:first-child {float: left;}
 .tabs_nav ul li.active {border-bottom: 8px solid #ffd800;color: #303030;cursor: default;}
 //.tabs_nav ul li:last-child {float: right;}
@@ -973,4 +980,8 @@ section.attention .toright {display: block;height: 185px;border: 1px solid #caca
 
 .funds {
     margin-bottom: 120px;
+}
+
+.margin-7 {
+    margin-left: 7%;
 }

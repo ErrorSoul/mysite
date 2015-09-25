@@ -20,5 +20,6 @@ section.simple_text
     article.container
       p.last-update style='margin-top: -60px;'
         = t(:last_updates)
-        span = @page.assets.first.publicated_at.strftime("%d.%m.%Y %H:%M")
+        - if @page.assets.first
+          span = @page.assets.first.publicated_at.strftime("%d.%m.%Y %H:%M")
       = @page.content.html_safe

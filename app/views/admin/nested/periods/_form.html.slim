@@ -5,12 +5,12 @@
       = f.text_field :name
       = f.hint :name
   
+- unless @fund.name.in? (%w(isu_capital isu_ai))
+  - Quartal::TYPES.each do |type|
 
-- Quartal::TYPES.each do |type|
-  
-  = f.panel type, title: t(type) do
-      = f.fields_for "#{type}_attributes".to_sym, resource.send(type) || resource.send("build_#{type}") do |af|
-        = render partial: 'quartal_form', locals: { af: af, resource: resource , obj_type: type }
+    = f.panel type, title: t(type) do
+        = f.fields_for "#{type}_attributes".to_sym, resource.send(type) || resource.send("build_#{type}") do |af|
+          = render partial: 'quartal_form', locals: { af: af, resource: resource , obj_type: type }
 
 
   

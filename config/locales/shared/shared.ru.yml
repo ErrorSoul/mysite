@@ -53,7 +53,7 @@ ru:
   dynamic_pure_f:  'Динамика стоимости чистых активов фонда'
   about_fund:      'О фонде'
   about_isu:       'Об ИСУ'
-
+  files:            'Файлы'
   # FUNDS
 
   main:     'Главная страница'
@@ -63,6 +63,8 @@ ru:
   capital_investment:  'Капитальные инвестиции'
   strategic: 'Стратегические инвестиции'
   isu_ai:     'ИСУ-А1'
+  isu_a2:     'ИСУ-А2'
+  isu_a3:     'ИСУ-A3'
 
   #partners
 
