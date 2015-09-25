@@ -2,8 +2,8 @@
 lock '3.4.0'
 
 set :application, 'afinance-site'
-set :repo_url, 'git@github.com:ErrorSoul/mysite.git'
-set :branch, 'AFS-deploy'
+set :repo_url, 'git@github.com:komestra/afinance-site.git'
+set :branch, 'develop'
 
 set :deploy_to, "/home/deployer/apps/#{fetch(:application)}"
 set :deploy_user, 'deployer'
