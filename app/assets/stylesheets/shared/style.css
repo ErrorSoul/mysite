@@ -742,7 +742,7 @@ a.docum:hover, div.docum:hover{color: #000000;}
 .docum.xls {background-image: url('/images/files/xls.png')}
 .docum.xls:hover {background-image: url('/images/files/xls_a.png')}
 .xls {background: url('/images/files/xls.png') center  no-repeat transparent; min-height: 35px;}
-.xls:hover {background: url('/images/files/xls_a.png')  left no-repeat transparent; min-height: 35px;}
+.xls:hover {background: url('/images/files/xls_a.png')  center  no-repeat transparent; min-height: 35px;}
 .pdf {background: url('/images/files/pdf.png') center  no-repeat; min-height: 35px;}
 .pdf:hover {background: url('/images/files/pdf_a.png') center no-repeat; min-height: 35px;  }
 .pad {text-align:center;}
