@@ -741,8 +741,11 @@ a.docum:hover, div.docum:hover{color: #000000;}
 .docum.pdf:hover {background-image: url('/images/files/pdf_a.png')}
 .docum.xls {background-image: url('/images/files/xls.png')}
 .docum.xls:hover {background-image: url('/images/files/xls_a.png')}
-.pdf {background: url('/images/files/pdf.png') center left no-repeat }
-.pdf:hover {background: url('/images/files/pdf_a.png') center left no-repeat  }
+.xls {background: url('/images/files/xls.png') center  no-repeat transparent; min-height: 35px;}
+.xls:hover {background: url('/images/files/xls_a.png')  center  no-repeat transparent; min-height: 35px;}
+.pdf {background: url('/images/files/pdf.png') center  no-repeat; min-height: 35px;}
+.pdf:hover {background: url('/images/files/pdf_a.png') center no-repeat; min-height: 35px;  }
+.pad {text-align:center;}
 
 
 table.newslist {width: 100%;}
