@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'momentjs-rails'
+gem 'turbolinks'
 
 # Twitter Bootstrap
 gem 'sass-rails', '~> 5.0'
